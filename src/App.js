@@ -4,10 +4,12 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
+import Announcement from "./components/Announcement";
 
 function App() {
   return (
     <BrowserRouter>
+      <Announcement />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
