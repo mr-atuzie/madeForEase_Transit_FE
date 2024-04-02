@@ -9,10 +9,9 @@ const ForgotPassword = () => {
         <h2 className=" text-xl lg:text-3xl font-bold text-center">
           Forgot your Password
         </h2>
-        <p className=" font2 text-gray-500 text-sm text-center">
+        <p className=" font2 text-gray-600 text-sm text-center ">
           Enter your email below, you will receive an email with instructions on
-          how to reset your password in a few minutes. You can also set a new
-          password if you’ve never set one before
+          how to reset your password in a few minutes.
         </p>
         <div className=" w-full flex flex-col gap-2 mt-6">
           <label
