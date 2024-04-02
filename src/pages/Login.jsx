@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div className=" font2 w-full bg-gray-50 flex flex-row-reverse min-h-screen">
       <div className="hidden lg:block lg:w-[50%] m-3 rounded-md  bg-red-300"></div>
-      <div className=" w-[85%] mx-auto lg:w-[50%]   flex flex-col justify-center items-center">
+      <div className=" w-[90%] mx-auto lg:w-[50%]   flex flex-col justify-center items-center">
         <form>
           logo
           <h2 className=" text-xl lg:text-3xl font-bold">Welcome back,Login</h2>
