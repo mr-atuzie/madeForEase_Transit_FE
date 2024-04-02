@@ -8,13 +8,14 @@ const Announcement = () => {
       <Marquee speed={60} gradient={false} pauseOnHover>
         <div className=" flex gap-6 mr-4">
           <p className=" font-medium">
-            Cryptos: <span className=" text-blue-500">24m+</span>
+            USA Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
           <p className=" font-medium">
-            Exchanges: <span className=" text-blue-600">736</span>
+            Russia Lorem ipsum dolor sit amet consectetur adipisicing.
           </p>
           <p className="flex items-center font-medium">
-            Market Cap: <span className=" text-blue-600"> $2.63T </span>
+            Cryptocurrency Market Cap:{" "}
+            <span className=" text-blue-600"> $2.63T </span>
             <span className=" flex text-red-600 ml-2">
               <MdOutlineArrowDropDown />
               1.31%
