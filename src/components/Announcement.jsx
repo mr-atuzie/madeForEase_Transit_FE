@@ -4,7 +4,7 @@ import { MdOutlineArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
 
 const Announcement = () => {
   return (
-    <div className=" absolute bottom-0  font2 flex justify-between bg-black/40 text-white text-sm items-center py-3 px-2">
+    <div className=" absolute font2 bottom-0 bg-black bg-transparent  font2 flex justify-between  text-white text-sm items-center py-3 px-2">
       <Marquee speed={70} gradient={false} pauseOnHover>
         <div className=" flex gap-6 mr-4">
           <p className=" text-xs font-medium">
