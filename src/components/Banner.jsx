@@ -14,7 +14,9 @@ const Banner = () => {
             Your access to global finacial market
           </p>
           <p className=" text-white text-sm lg:text-base font-medium mt-1">
-            Invest in hundreds of US stocks commission free
+            Invest in hundreds of US stocks commission free, Access 20,000+
+            instruments – across asset classes – to trade, hedge and invest from
+            a single account.
           </p>
         </div>
       </div>
