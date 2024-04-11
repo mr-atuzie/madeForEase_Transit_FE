@@ -44,7 +44,7 @@ const Navbar = () => {
         </button>
       </div>
       {menu && (
-        <div className=" h-screen fixed left-0 bg-gray-50 top-0 z-40 w-[70%]">
+        <div className=" h-screen fixed left-0 bg-gray-50 top-0 z-50  w-[70%]">
           sidebar
         </div>
       )}

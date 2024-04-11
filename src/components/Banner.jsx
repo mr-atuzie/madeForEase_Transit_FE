@@ -8,7 +8,7 @@ const Banner = () => {
         <source src="https://universaloptions.org/wp-content/uploads/2021/11/Hero-Video.mp4" />
       </video>
 
-      <div className=" absolute top-0 bottom-0 bg-black/45 w-full h-full flex flex-col justify-center ">
+      <div className=" absolute top-0 bottom-0 bg-black/15 w-full h-full flex flex-col justify-center ">
         <div className=" w-[90%] mx-auto">
           <p className=" text-2xl capitalize lg:text-6xl font-bold text-gray-50">
             Your access to global finacial market
