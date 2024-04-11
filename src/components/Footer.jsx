@@ -66,7 +66,7 @@ const Footer = () => {
       <div className=" w-[90%] mx-auto ">
         <div className="lg:flex justify-between">
           <h3 className=" text-3xl lg:w-[15%] mb-8 lg:mb-0 ">Logo</h3>
-          <div className="lg: w-[80%] flex gap-6 flex-wrap justify-between">
+          <div className="lg: w-[80%] flex gap-6 flex-col lg:flex-row justify-between">
             {footer.map((item) => {
               return (
                 <div key={item.title}>
