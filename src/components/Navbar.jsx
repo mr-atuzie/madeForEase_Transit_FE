@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className=" font2 flex items-center h-[60px]">
+    <nav className="  w-full font2 flex items-center h-[60px]">
       <div className=" w-[90%]  flex items-center justify-between mx-auto">
         <div className=" flex items-center gap-10">
           <h1 className=" text-3xl font-semibold">Logo</h1>
 
-          <ul className="  hidden lg:flex gap-6 items-center">
+          <ul className="   hidden lg:flex gap-6 items-center">
             <li className=" font-semibold">Fund wallet</li>
             <li className=" font-semibold">Withdrawal</li>
             <li className=" font-semibold">Invest</li>

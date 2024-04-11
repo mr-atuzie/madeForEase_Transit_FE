@@ -1,16 +1,16 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Announcement from "../components/Announcement";
+import Banner from "../components/Banner";
 
 const Home = () => {
   return (
-    <div>
-      <Announcement />
+    <>
       <Navbar />
+      <Banner />
       Home
       <Footer />
-    </div>
+    </>
   );
 };
 
