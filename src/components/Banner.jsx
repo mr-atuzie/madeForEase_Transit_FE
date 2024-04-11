@@ -9,7 +9,7 @@ const Banner = () => {
 
       <div className=" absolute top-0 bottom-0 bg-black/65 w-full h-full flex flex-col justify-center ">
         <div className=" w-[90%] mx-auto">
-          <p className=" text-3xl capitalize lg:text-6xl font-bold text-gray-50">
+          <p className=" text-2xl capitalize lg:text-6xl font-bold text-gray-50">
             Your access to global finacial market
           </p>
           <p className=" text-white text-sm lg:text-base font-medium mt-1">
