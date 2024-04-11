@@ -7,7 +7,14 @@ const Banner = () => {
         <source src="https://universaloptions.org/wp-content/uploads/2021/11/Hero-Video.mp4" />
       </video>
 
-      <div className=" absolute top-0 bottom-0 bg-black w-full h-full"></div>
+      <div className=" absolute top-0 bottom-0 bg-black/35 w-full h-full flex justify-center items-center">
+        <p className=" text-xl text-gray-50">
+          Your access to global finacial market
+        </p>
+        <p className=" text-white text-sm lg:text-base">
+          Invest in hundreds of US stocks commission free
+        </p>
+      </div>
     </div>
   );
 };
