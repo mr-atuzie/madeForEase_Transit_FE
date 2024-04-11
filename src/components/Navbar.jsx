@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdOutlineClose } from "react-icons/md";
 
 const Navbar = () => {
+  const [menu, setMenu] = useState(false);
   return (
     <nav className="  w-full font2 flex items-center h-[60px]">
       <div className=" w-[90%]  flex items-center justify-between mx-auto">
@@ -19,7 +22,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className=" flex items-center gap-6">
+        <div className="  hidden lg:flex  items-center gap-6">
           <Link to={"/login"}>
             <button className=" border-2 font-medium border-black rounded-md px-4 py-2">
               Log in
@@ -32,7 +35,19 @@ const Navbar = () => {
             </button>
           </Link>
         </div>
+
+        <button
+          onClick={() => setMenu(!menu)}
+          className=" border shadow-md p-1 bg-white rounded-md lg:hidden z-50"
+        >
+          {menu ? <MdOutlineClose size={25} /> : <RxHamburgerMenu size={25} />}
+        </button>
       </div>
+      {menu && (
+        <div className=" h-screen fixed left-0 bg-gray-50 top-0 z-40 w-[80%]">
+          sidebar
+        </div>
+      )}
     </nav>
   );
 };
