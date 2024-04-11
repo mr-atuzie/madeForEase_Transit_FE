@@ -2,13 +2,13 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className=" relative w-full h-[80vh]">
+    <div className=" relative w-full h-[70vh] lg:h-[80vh]">
       <video className=" w-full h-full object-cover" muted autoPlay loop>
         <source src="https://universaloptions.org/wp-content/uploads/2021/11/Hero-Video.mp4" />
       </video>
 
-      <div className=" absolute top-0 bottom-0 bg-black/35 w-full h-full flex justify-center items-center">
-        <p className=" text-xl text-gray-50">
+      <div className=" absolute top-0 bottom-0 bg-black/75 w-full h-full flex flex-col justify-center items-center">
+        <p className=" text-3xl text-gray-50">
           Your access to global finacial market
         </p>
         <p className=" text-white text-sm lg:text-base">
