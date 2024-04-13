@@ -6,7 +6,7 @@ import { MdOutlineClose } from "react-icons/md";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   return (
-    <nav className=" z-40 absolute top-0  w-full font2 flex items-center h-[60px]">
+    <nav className=" z-50  absolute top-0  w-full font2 flex items-center h-[60px]">
       <div className=" w-[90%]  flex items-center justify-between mx-auto">
         <div className=" flex items-center gap-10">
           <h1 className=" text-white text-3xl font-bold">Logo</h1>
@@ -38,7 +38,7 @@ const Navbar = () => {
 
         <button
           onClick={() => setMenu(!menu)}
-          className=" text-gray-50 lg:hidden "
+          className=" z-50  text-gray-50 lg:hidden "
         >
           {menu ? <MdOutlineClose size={25} /> : <RxHamburgerMenu size={25} />}
         </button>
