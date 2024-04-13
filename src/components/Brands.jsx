@@ -20,7 +20,7 @@ const Brands = () => {
     },
   ];
   return (
-    <div>
+    <div className=" font2 py-8">
       <div className=" w-[90%] mx-auto">
         <h1 className=" text-center font-extrabold">Our Parteners</h1>
         <p className=" text-gray-500 text-sm text-center mb-6">
