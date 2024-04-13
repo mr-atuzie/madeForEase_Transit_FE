@@ -27,7 +27,7 @@ const Brands = () => {
           Lorem ipsum dolor sit amet consectetur.
         </p>
 
-        <Marquee speed={70} gradient={false} pauseOnHover>
+        <Marquee direction="right" speed={70} gradient={false} pauseOnHover>
           <div className=" grid gap-4 grid-cols-4">
             {logos.map((logo, index) => {
               return (
