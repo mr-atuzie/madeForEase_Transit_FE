@@ -30,7 +30,9 @@ const Brands = () => {
         <Marquee speed={70} gradient={false} pauseOnHover>
           <div className=" grid gap-4 grid-cols-4">
             {logos.map((logo, index) => {
-              return <img className=" w-20" key={index} src={logo} alt="" />;
+              return (
+                <img className=" w-20" key={index} src={logo.img} alt="" />
+              );
             })}
           </div>
         </Marquee>
