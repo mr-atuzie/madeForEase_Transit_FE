@@ -28,7 +28,7 @@ const Banner = () => {
               <h2 className=" text-center text-lg lg:text-2xl font-extrabold  text-orange-500">
                 $15M <span>+</span>
               </h2>
-              <p className=" text-center font-medium text-xs lg:text-sm  text-white">
+              <p className=" text-center font-medium capitalize text-xs lg:text-sm  text-white">
                 Total deposit
               </p>
             </div>
@@ -37,7 +37,7 @@ const Banner = () => {
               <h2 className=" text-orange-500 text-center text-lg  lg:text-2xl font-extrabold">
                 13k
               </h2>
-              <p className=" text-white text-xs lg:text-sm font-medium capitalize text-center">
+              <p className=" text-white text-xs lg:text-sm font-medium capitalize text-center ">
                 Investors
               </p>
             </div>
@@ -46,7 +46,7 @@ const Banner = () => {
               <h2 className=" text-center text-lg  lg:text-2xl font-extrabold text-orange-500">
                 $55M <span className="">+</span>
               </h2>
-              <p className=" text-white text-xs lg:text-sm font-medium text-center ">
+              <p className=" text-white text-xs lg:text-sm font-medium text-center capitalize ">
                 Total withdrwal
               </p>
             </div>
@@ -55,7 +55,7 @@ const Banner = () => {
               <h2 className=" text-center text-lg lg:text-2xl font-extrabold text-orange-500">
                 90%
               </h2>
-              <p className=" text-white  text-xs lg:text-sm font-medium text-center ">
+              <p className=" text-white  text-xs lg:text-sm font-medium text-center  capitalize">
                 Success rate
               </p>
             </div>
