@@ -51,14 +51,14 @@ const Banner = () => {
               </p>
             </div>
 
-            <div className=" ">
+            {/* <div className=" ">
               <h2 className=" text-center text-lg lg:text-2xl font-extrabold text-orange-500">
                 92%
               </h2>
               <p className=" text-white  text-xs lg:text-sm font-medium text-center ">
                 Trading Success
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
