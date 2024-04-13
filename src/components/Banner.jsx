@@ -25,7 +25,7 @@ const Banner = () => {
 
           <div className=" mt-5 flex gap-5 lg:gap-8">
             <div className=" ">
-              <h2 className=" text-center text-xl lg:text-2xl font-bold  text-orange-500">
+              <h2 className=" text-center text-xl lg:text-2xl font-extrabold  text-orange-500">
                 $15M <span>+</span>
               </h2>
               <p className="  text-xs lg:text-sm font-medium  text-white">
@@ -33,7 +33,7 @@ const Banner = () => {
               </p>
             </div>
             <div className=" ">
-              <h2 className=" text-orange-500 text-center text-xl lg:text-2xl font-bold">
+              <h2 className=" text-orange-500 text-center text-xl lg:text-2xl font-extrabold">
                 13k
               </h2>
               <p className=" text-white text-xs lg:text-sm font-medium capitalize">
@@ -41,7 +41,7 @@ const Banner = () => {
               </p>
             </div>
             <div className=" ">
-              <h2 className=" text-center ttext-xl lg:text-2xl font-bold text-orange-600">
+              <h2 className=" text-center ttext-xl lg:text-2xl font-extrabold text-orange-600">
                 $55M <span className="">+</span>
               </h2>
               <p className=" text-white text-xs lg:text-sm font-medium ">
@@ -50,7 +50,7 @@ const Banner = () => {
             </div>
 
             <div className=" ">
-              <h2 className=" text-center text-xl lg:text-2xl font-bold text-orange-500">
+              <h2 className=" text-center text-xl lg:text-2xl font-extrabold text-orange-500">
                 92%
               </h2>
               <p className=" text-white  text-xs lg:text-sm font-medium ">
