@@ -23,12 +23,12 @@ const Banner = () => {
             Get started
           </button> */}
 
-          <div className=" mt-5 flex gap-4 border p-2 lg:gap-8">
+          <div className=" mt-5 flex gap-4 border w-fit p-2 lg:p-4 lg:gap-8">
             <div className=" ">
               <h2 className=" text-center text-xl lg:text-2xl font-extrabold  text-orange-500">
                 $15M <span>+</span>
               </h2>
-              <p className=" text-center  text-xs lg:text-sm font-medium  text-white">
+              <p className=" text-center  text-xs lg:text-sm  text-white">
                 Total Deposit
               </p>
             </div>
