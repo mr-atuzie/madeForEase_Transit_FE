@@ -29,7 +29,7 @@ const Banner = () => {
                 $15M <span>+</span>
               </h2>
               <p className=" text-center font-medium text-xs lg:text-sm  text-white">
-                Total Deposit
+                Total deposit
               </p>
             </div>
 
@@ -47,7 +47,7 @@ const Banner = () => {
                 $55M <span className="">+</span>
               </h2>
               <p className=" text-white text-xs lg:text-sm font-medium text-center ">
-                Total Withdrwal
+                Total withdrwal
               </p>
             </div>
 
