@@ -10,8 +10,8 @@ const Banner = () => {
 
       <div className=" absolute top-0 bottom-0 bg-black/25 w-full h-full flex flex-col justify-center ">
         <div className=" w-[90%] mx-auto">
-          <h2 className=" text-2xl capitalize lg:text-6xl font-bold text-gray-50">
-            Your access to global finacial market
+          <h2 className=" text-2xl  capitalize lg:text-6xl font-extrabold text-gray-50">
+            Your access to global finacial market.
           </h2>
           <p className=" text-sm text-gray-200 lg:text-base font-medium my-3 lg:max-w-lg">
             Invest in hundreds of US stocks commission free, Access 20,000+
