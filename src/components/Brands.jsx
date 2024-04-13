@@ -43,7 +43,7 @@ const Brands = () => {
         </p>
 
         <Marquee direction="right" speed={70} gradient={false} pauseOnHover>
-          <div className=" grid gap-4 items-center grid-cols-5 ">
+          <div className=" grid gap-4 mb-2 items-center grid-cols-5 ">
             {logos.slice(0, 5).map((logo, index) => {
               return (
                 <img
@@ -57,7 +57,7 @@ const Brands = () => {
           </div>
         </Marquee>
         <Marquee direction="left" speed={70} gradient={false} pauseOnHover>
-          <div className=" grid gap-4 grid-cols-5">
+          <div className=" grid gap-4 items-center grid-cols-5">
             {logos.slice(5, 10).map((logo, index) => {
               return (
                 <img

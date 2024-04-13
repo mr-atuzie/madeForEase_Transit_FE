@@ -23,7 +23,7 @@ const Banner = () => {
             Get started
           </button> */}
 
-          <div className=" mt-5 flex gap-3  lg:gap-8">
+          <div className=" mt-5 flex gap-4  lg:gap-8">
             <div>
               <h2 className=" text-center text-lg lg:text-2xl font-extrabold  text-orange-500">
                 $15M <span>+</span>
@@ -44,7 +44,7 @@ const Banner = () => {
 
             <div className=" ">
               <h2 className=" text-center text-lg  lg:text-2xl font-extrabold text-orange-500">
-                $ 55M <span className="">+</span>
+                $55M <span className="">+</span>
               </h2>
               <p className=" text-white text-xs lg:text-sm font-medium text-center ">
                 Total Withdrwal
@@ -56,7 +56,7 @@ const Banner = () => {
                 90%
               </h2>
               <p className=" text-white  text-xs lg:text-sm font-medium text-center ">
-                Success
+                Success rate
               </p>
             </div>
           </div>
