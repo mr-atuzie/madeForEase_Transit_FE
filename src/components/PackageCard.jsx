@@ -7,7 +7,9 @@ const PackageCard = ({ title }) => {
     <div className=" shadow-md p-3 border rounded">
       <h1 className=" text-2xl font-extrabold">{title}</h1>
       <div className=" my-4">
-        <span className=" text-gray-500 text-sm font-medium">Plan price</span>
+        <span className=" text-gray-500 text-sm font-medium uppercase">
+          Plan price
+        </span>
         <h3 className=" text-lg font-extrabold -mt-2">$5,000</h3>
       </div>
 
