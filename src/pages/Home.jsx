@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import Brands from "../components/Brands";
 import Faq from "../components/Faq";
+import Pricing from "../components/Pricing";
 
 const Home = () => {
   return (
@@ -19,11 +20,9 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className=" font2">
-        <div className=" w-[90%] mx-auto">
-          <h1 className="  text-xl text-center font-extrabold">Packages</h1>
-        </div>
-      </div>
+
+      <Pricing />
+
       <Faq />
       <Footer />
     </div>
