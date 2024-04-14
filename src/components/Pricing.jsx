@@ -8,7 +8,7 @@ const Pricing = () => {
         <h1 className="  text-2xl text-center font-extrabold mb-3">
           Our Packages
         </h1>
-        <div className=" grid gap-4 grid-cols-1 md:grid-cols-4 justify-between">
+        <div className=" grid gap-6 grid-cols-1 md:grid-cols-4 justify-between">
           <PackageCard title="Diamond plan" />
           <PackageCard title="Gold plan" />
           <PackageCard title="Silver plan" />
