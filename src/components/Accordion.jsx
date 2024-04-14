@@ -6,7 +6,7 @@ const Accordion = ({ title, answer }) => {
   return (
     <div className=" py-2">
       <button
-        className=" w-full flex justify-between items-center"
+        className=" w-full flex justify-between text-sm lg:text-base items-center"
         onClick={() => setAccordion(!accordion)}
       >
         <h1>{title}</h1>
@@ -22,7 +22,7 @@ const Accordion = ({ title, answer }) => {
         )}
       </button>
       <div
-        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 text-sm ${
+        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 text-xs lg:text-sm ${
           accordion
             ? " grid-rows-[1fr] opacity-100"
             : "grid-rows-[0fr] opacity-0"
