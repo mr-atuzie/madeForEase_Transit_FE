@@ -4,12 +4,12 @@ import { FaPlus, FaMinus } from "react-icons/fa6";
 const Accordion = ({ title, answer }) => {
   const [accordion, setAccordion] = useState(false);
   return (
-    <div className=" py-2">
+    <div className=" mb-3">
       <button
-        className=" w-full flex justify-between text-sm lg:text-base items-center"
+        className=" p-2.5 bg-orange-50 w-full flex justify-between text-sm lg:text-base items-center"
         onClick={() => setAccordion(!accordion)}
       >
-        <h1>{title}</h1>
+        <h1 className=" font-medium">{title}</h1>
 
         {accordion ? (
           <span className=" text-orange-500">
@@ -22,10 +22,8 @@ const Accordion = ({ title, answer }) => {
         )}
       </button>
       <div
-        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 text-xs lg:text-sm ${
-          accordion
-            ? " grid-rows-[1fr] opacity-100"
-            : "grid-rows-[0fr] opacity-0"
+        className={`grid p-2 overflow-hidden transition-all duration-300 ease-in-out text-slate-600 text-sm ${
+          accordion ? " grid-rows-[1fr] block" : "grid-rows-[0fr] hidden"
         }`}
       >
         <p>{answer}</p>
