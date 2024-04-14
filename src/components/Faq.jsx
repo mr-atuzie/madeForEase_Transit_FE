@@ -21,7 +21,7 @@ const Faq = () => {
         />
 
         <Accordion
-          title="Would you take 1M naira or a Night with Ayra star?"
+          title="1M naira or a Night with Ayra star?"
           answer="Depend on the mood you fins me,I can lie she is wonderful and all but most times she's a BITCH."
         />
 
