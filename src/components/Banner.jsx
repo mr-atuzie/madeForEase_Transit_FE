@@ -38,7 +38,7 @@ const Banner = () => {
                 13k
               </h2>
               <p className=" text-white text-xs lg:text-sm font-medium capitalize text-center ">
-                Investors
+                Total Investors
               </p>
             </div>
 
@@ -53,7 +53,7 @@ const Banner = () => {
 
             <div className=" ">
               <h2 className=" text-center text-lg lg:text-2xl font-extrabold text-orange-500">
-                90%
+                92%
               </h2>
               <p className=" text-white  text-xs lg:text-sm font-medium text-center  capitalize">
                 Success rate
