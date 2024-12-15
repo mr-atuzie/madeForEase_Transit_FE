@@ -38,10 +38,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button
-          onClick={() => setMenu(!menu)}
-          className=" z-50  text-gray-50 lg:hidden "
-        >
+        <button onClick={() => setMenu(!menu)} className=" z-50   lg:hidden ">
           {menu ? <MdOutlineClose size={25} /> : <RxHamburgerMenu size={25} />}
         </button>
       </div>
