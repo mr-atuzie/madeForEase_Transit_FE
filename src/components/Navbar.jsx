@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className=" w-[90%] lg:w-[95%]  flex items-center justify-between mx-auto">
         <div className=" flex items-center gap-10">
           <h1 className=" text-xs text-start uppercase  lg:text-sm font-bold">
-            Made For Ease <br className=" lg:hidden" /> Transit
+            Made For Ease Transit
           </h1>
 
           <ul className="   hidden lg:flex gap-6 items-center">
