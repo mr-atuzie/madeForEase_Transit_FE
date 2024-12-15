@@ -7,10 +7,10 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
   return (
     <nav className="  bg-white  w-full font2 flex items-center h-[60px]">
-      <div className=" w-[90%]  flex items-center justify-between mx-auto">
+      <div className=" w-[90%] lg:w-[95%]  flex items-center justify-between mx-auto">
         <div className=" flex items-center gap-10">
-          <h1 className=" text-xs text-start  lg:text-sm font-bold">
-            Made For <br className=" lg:hidden" /> Ease Transit
+          <h1 className=" text-xs text-start uppercase  lg:text-sm font-bold">
+            Made For Ease <br className=" lg:hidden" /> Transit
           </h1>
 
           <ul className="   hidden lg:flex gap-6 items-center">
