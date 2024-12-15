@@ -9,7 +9,9 @@ const Navbar = () => {
     <nav className=" z-50  absolute top-0  w-full font2 flex items-center h-[60px]">
       <div className=" w-[90%]  flex items-center justify-between mx-auto">
         <div className=" flex items-center gap-10">
-          <h1 className=" text-white text-3xl font-bold">Logo</h1>
+          <h1 className=" text-white text-sm font-bold">
+            Made For Ease Transit
+          </h1>
 
           <ul className="   hidden lg:flex gap-6 items-center">
             <li className=" font-semibold">Fund wallet</li>
