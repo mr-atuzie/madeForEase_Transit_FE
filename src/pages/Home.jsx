@@ -2,16 +2,13 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
-import Brands from "../components/Brands";
 import Faq from "../components/Faq";
-import Pricing from "../components/Pricing";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
       <Banner />
-      <Brands />
       <div className=" font2">
         <div className=" w-[90%] mx-auto">
           <h1 className=" text-center font-extrabold">About Us</h1>
@@ -20,8 +17,6 @@ const Home = () => {
           </p>
         </div>
       </div>
-
-      <Pricing />
 
       <Faq />
       <Footer />
