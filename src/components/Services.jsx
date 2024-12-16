@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="w-[90%] lg:w-[95%] py-12 mx-auto">
+    <div className="w-[90%] lg:w-[95%] py-10 mx-auto">
       {/* Header Section */}
       <div className="flex flex-col mb-8 justify-center items-center">
         <h1 className="text-2xl text-center font-bold text-gray-800">
