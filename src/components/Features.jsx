@@ -5,15 +5,15 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 
 const Features = () => {
   return (
-    <div className=" w-[90%] lg:w-[95%] py-12  ">
+    <div className=" w-[90%] lg:w-[95%] py-10  ">
       <div className=" flex flex-col mb-5 justify-center items-center">
         <h1 className=" text-lg text-center font-bold">Why Choose us</h1>
-        <p className="text-gray-500 text-center text-sm">
+        <p className="text-yellow-500 text-center font-medium  text-sm">
           Fast,reliable transit made for your ease.
         </p>
       </div>
 
-      <div className="flex flex-col lg:grid lg:grid-cols-3 lg:gap-6 gap-4 items-center justify-center py-6">
+      <div className="flex flex-col w-full lg:grid lg:grid-cols-3 lg:gap-6 gap-4 items-center justify-center mx-auto">
         {/* Service Card 1 */}
         <div className="p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
           <span className="w-14 h-14 flex justify-center items-center rounded-lg bg-yellow-100 text-yellow-600 shrink-0">
