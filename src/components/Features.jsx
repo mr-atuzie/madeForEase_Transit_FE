@@ -5,7 +5,7 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 
 const Features = () => {
   return (
-    <div className=" w-[90%] lg:w-[95%] py-10 mx-auto  ">
+    <div className=" w-[90%] lg:w-[95%] py-68 mx-auto  ">
       <div className=" flex flex-col mb-5 justify-center items-center">
         <h1 className=" text-lg text-center font-bold">Why Choose us</h1>
         <p className="text-yellow-500 text-center font-medium  text-sm">

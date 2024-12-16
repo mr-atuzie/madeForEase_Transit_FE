@@ -1,8 +1,9 @@
 import React from "react";
+import service from "../assets/service.jpg";
 
 const Services = () => {
   return (
-    <div className="w-[90%] lg:w-[95%] py-10 mx-auto">
+    <div className="w-[90%] lg:w-[95%] py-8 mx-auto">
       {/* Header Section */}
       <div className="flex flex-col mb-8 justify-center items-center">
         <h1 className="text-2xl text-center font-bold text-gray-800">
@@ -18,7 +19,7 @@ const Services = () => {
         {/* Service Card 1 */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
           <img
-            src="https://via.placeholder.com/300x200"
+            src={service}
             alt="Travel With Ease"
             className="w-full h-48 object-cover"
           />

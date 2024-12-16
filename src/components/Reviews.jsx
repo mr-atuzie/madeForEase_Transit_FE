@@ -58,15 +58,13 @@ const Reviews = () => {
     },
   ];
   return (
-    <div className="w-full  py-16">
+    <div className="w-full  py-8">
       <div className=" w-[90%]  mx-auto ">
-        <div className=" flex flex-col gap-4 justify-center mb-10 items-center">
-          <div className="  text-center px-6 py-1.5 bg-yellow-50 rounded-md w-fit">
-            Testimonial
-          </div>
-          <h1 className=" text-4xl font-semibold text-center">
-            What our users say
-          </h1>
+        <div className=" flex flex-col mb-5 justify-center items-center">
+          <h1 className=" text-lg text-center font-bold">Testimonials</h1>
+          <p className="text-yellow-500 text-center font-medium  text-sm">
+            What our customer say
+          </p>
         </div>
 
         {/* desktop slider */}
@@ -141,7 +139,7 @@ const Reviews = () => {
               return (
                 <SwiperSlide key={index}>
                   <div className=" shadow-lg border-2 relative overflow-hidden rounded-lg p-2.5 lg:p-5">
-                    <div className=" flex justify-between items-center">
+                    <div className=" z-50 flex justify-between ">
                       <div className=" flex items-center   my-4 gap-2">
                         <img
                           src={testimonal.img}
@@ -167,7 +165,7 @@ const Reviews = () => {
                       </div>
                     </div>
 
-                    <p className=" text-sm">
+                    <p className=" text-sm z-50">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Tempore consequatur neque debitis vel porro, cupiditate
                       aliquam, consectetur sed quisquam numquam asperiores
