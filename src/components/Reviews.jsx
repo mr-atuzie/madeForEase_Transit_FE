@@ -140,7 +140,7 @@ const Reviews = () => {
             {testimonals.map((testimonal, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className=" shadow-lg border-2 border-blue-50 rounded-lg p-2.5 lg:p-5">
+                  <div className=" shadow-lg border-2 relative overflow-hidden rounded-lg p-2.5 lg:p-5">
                     <div className=" flex justify-between items-center">
                       <div className=" flex items-center   my-4 gap-2">
                         <img
@@ -173,6 +173,8 @@ const Reviews = () => {
                       aliquam, consectetur sed quisquam numquam asperiores
                       accusantium, tempora nesciunt molestias.
                     </p>
+
+                    <div className=" absolute -bottom-6 rounded-full right-0 w-24 h-24 bg-yellow-500 opacity-50 z-30"></div>
                   </div>
                 </SwiperSlide>
               );
