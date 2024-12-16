@@ -15,7 +15,7 @@ const Features = () => {
 
       <div className="flex flex-col w-[95%] lg:grid lg:grid-cols-3 lg:gap-6 gap-4 items-center justify-center mx-auto">
         {/* Service Card 1 */}
-        <div className="p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
+        <div className="p-2 lg:p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
           <span className="w-14 h-14 flex justify-center items-center rounded-lg bg-yellow-100 text-yellow-600 shrink-0">
             <FaMapMarkerAlt size={24} />
           </span>
@@ -29,7 +29,7 @@ const Features = () => {
         </div>
 
         {/* Service Card 2 */}
-        <div className="p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
+        <div className="p-2 lg:p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
           <span className="w-14 h-14 flex justify-center items-center rounded-lg bg-yellow-100 text-yellow-600 shrink-0">
             <FaRegCalendarAlt size={24} />
           </span>
@@ -43,7 +43,7 @@ const Features = () => {
         </div>
 
         {/* Service Card 3 */}
-        <div className="p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
+        <div className="p-2 lg:p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
           <span className="w-14 h-14 flex justify-center items-center rounded-lg bg-yellow-100 text-yellow-600 shrink-0">
             <FaPiggyBank size={24} />
           </span>
@@ -73,7 +73,7 @@ const Features = () => {
         </div>
 
         {/* Service Card 5 */}
-        <div className="p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
+        <div className="p-2 lg:p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
           <span className="w-14 h-14 flex justify-center items-center rounded-lg bg-yellow-100 text-yellow-600 shrink-0">
             <RiCustomerService2Fill size={24} />
           </span>

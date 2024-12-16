@@ -41,7 +41,7 @@ const Services = () => {
             className="w-full h-48 object-cover"
           />
           <div className="p-6 text-center">
-            <h3 className="text-lg font-bold text-gray-800">Rent Rides</h3>
+            <h3 className="text-lg font-bold text-yellow-600">Rent Rides</h3>
             <p className="text-gray-600 text-sm">
               Rent a car for as low as 50,000 Naira per day. Flexible and
               affordable options available.
