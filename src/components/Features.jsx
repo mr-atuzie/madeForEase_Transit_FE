@@ -1,11 +1,12 @@
 import React from "react";
 import { FaMapMarkerAlt, FaRegCalendarAlt } from "react-icons/fa";
 import { FaPiggyBank, FaTrain } from "react-icons/fa6";
+import { RiCustomerService2Fill } from "react-icons/ri";
 
 const Features = () => {
   return (
     <div className=" w-[90%] lg:w-[95%] py-12  ">
-      <div className=" flex flex-col justify-center items-center">
+      <div className=" flex flex-col mb-5 justify-center items-center">
         <h1 className=" text-lg text-center font-bold">Why Choose us</h1>
         <p className="text-gray-500 text-center text-sm">
           Fast,reliable transit made for your ease.
@@ -71,7 +72,7 @@ const Features = () => {
 
         <div className=" p-3 flex border  gap-3 rounded-lg  shadow-sm">
           <span className=" w-14 h-14 rounded-lg flex justify-center items-center bg-yellow-100 text-yellow-600">
-            <FaTrain size={20} />
+            <RiCustomerService2Fill size={20} />
           </span>
 
           <div>
