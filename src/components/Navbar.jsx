@@ -6,7 +6,7 @@ import { MdOutlineClose } from "react-icons/md";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   return (
-    <nav className="  bg-white  w-full font2 flex items-center h-[60px]">
+    <nav className="  bg-white  w-full font2 flex items-center h-[50px]">
       <div className=" w-[90%] lg:w-[95%]  flex items-center justify-between mx-auto">
         <div className=" flex items-center gap-10">
           <h1 className=" tracking-wider text-xs text-start uppercase  lg:text-sm font-bold">
