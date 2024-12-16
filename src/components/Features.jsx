@@ -13,7 +13,7 @@ const Features = () => {
         </p>
       </div>
 
-      <div className="flex flex-col w-full lg:grid lg:grid-cols-3 lg:gap-6 gap-4 items-center justify-center mx-auto">
+      <div className="flex flex-col w-[95%] lg:grid lg:grid-cols-3 lg:gap-6 gap-4 items-center justify-center mx-auto">
         {/* Service Card 1 */}
         <div className="p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300">
           <span className="w-14 h-14 flex justify-center items-center rounded-lg bg-yellow-100 text-yellow-600 shrink-0">

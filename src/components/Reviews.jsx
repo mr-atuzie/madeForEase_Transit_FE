@@ -174,8 +174,8 @@ const Reviews = () => {
                       accusantium, tempora nesciunt molestias.
                     </p>
 
-                    <div className=" absolute -bottom-10 rounded-full right-0 w-24 h-24 bg-yellow-500 opacity-50 z-20"></div>
-                    <div className=" absolute -top-10 rounded-full left-0 w-24 h-24 bg-yellow-500 opacity-50 z-20"></div>
+                    <div className=" absolute -bottom-10 rounded-full -right-8 w-24 h-24 bg-yellow-500 opacity-50 z-20"></div>
+                    <div className=" absolute -top-10 rounded-full -left-6 w-24 h-24 bg-yellow-500 opacity-50 z-20"></div>
                   </div>
                 </SwiperSlide>
               );
