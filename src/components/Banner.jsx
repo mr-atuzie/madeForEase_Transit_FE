@@ -11,17 +11,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { A11y, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 const Banner = () => {
   return (
     <Swiper // install Swiper modules
-      modules={[Pagination, A11y, Autoplay]}
+      modules={[Autoplay]}
       // spaceBetween={50}
       slidesPerView={1}
-      navigation
+      // navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // scrollbar={{ draggable: true }}
       autoplay={{
         delay: 1500,
         disableOnInteraction: false,
