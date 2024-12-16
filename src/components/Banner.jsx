@@ -11,7 +11,14 @@ const Banner = () => {
         alt=""
       />
 
-      <div className=" absolute top-0 bg-black/60 bottom-0 left-0 w-full h-full rounded-lg"></div>
+      <div className=" absolute top-0 bg-black/60 bottom-0 left-0 w-full h-full rounded-lg">
+        <h1>Simplifying the art of Transportation</h1>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+          nostrum cum nam alias at rerum, fugit eum non!
+        </p>
+      </div>
     </div>
   );
 };
