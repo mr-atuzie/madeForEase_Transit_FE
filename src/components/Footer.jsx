@@ -62,7 +62,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className=" bg-blue-50   py-10 flex justify-center items-center font2">
+    <footer className=" bg-black text-white   py-10 flex justify-center items-center font2">
       <div className=" w-[90%] mx-auto ">
         <div className="lg:flex justify-between">
           <h3 className=" text-3xl lg:w-[15%] mb-8 lg:mb-0 ">Logo</h3>
