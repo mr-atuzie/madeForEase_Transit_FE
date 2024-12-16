@@ -3,6 +3,7 @@ import service from "../assets/service1.jpg";
 import service2 from "../assets/service2.png";
 import service3 from "../assets/service3.jpg";
 import service4 from "../assets/service4.jpg";
+import service5 from "../assets/service5.jpeg";
 
 const Services = () => {
   return (
@@ -88,7 +89,7 @@ const Services = () => {
         {/* Service Card 5 */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
           <img
-            src="https://via.placeholder.com/300x200"
+            src={service5}
             alt="Supermarket Delivery"
             className="w-full h-48 object-cover"
           />
