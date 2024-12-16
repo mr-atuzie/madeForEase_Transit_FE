@@ -37,7 +37,7 @@ const Banner = () => {
             alt=""
           />
 
-          <div className=" absolute top-0 bg-black/50 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
+          <div className=" absolute top-0 bg-black/40 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
             <h1 className=" text-2xl font-bold text-white">
               Simplifying the art of{" "}
               <span className=" text-yellow-600">Transportation</span>{" "}
@@ -68,7 +68,7 @@ const Banner = () => {
             alt=""
           />
 
-          <div className=" absolute top-0 bg-black/50 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
+          <div className=" absolute top-0 bg-black/40 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
             <h1 className=" text-2xl font-bold text-white">
               Takng Travel To New Heights In{" "}
               <span className=" text-yellow-600">Port Harcourt City</span>{" "}
@@ -99,7 +99,7 @@ const Banner = () => {
             alt=""
           />
 
-          <div className=" absolute top-0 bg-black/50 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
+          <div className=" absolute top-0 bg-black/40 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
             <h1 className=" text-2xl font-bold text-white">
               Let us bring the
               <span className=" text-yellow-600">Supermarket</span> to your
@@ -130,7 +130,7 @@ const Banner = () => {
             alt=""
           />
 
-          <div className=" absolute top-0 bg-black/50 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
+          <div className=" absolute top-0 bg-black/40 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
             <h1 className=" text-2xl font-bold text-white">
               Rent a car per day for as low as
               <span className=" text-yellow-600">₦50,000</span>{" "}
