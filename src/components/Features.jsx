@@ -12,8 +12,8 @@ const Features = () => {
         </p>
       </div>
 
-      <div className=" grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <div className=" p-3 border flex  gap-3  shadow-sm">
+      <div className=" grid grid-cols-1 justify-center gap-4 lg:grid-cols-3">
+        <div className=" p-3 border grid grid-cols-1  gap-3 rounded-lg  shadow-sm">
           <span className=" w-14 h-14 rounded-lg flex justify-center items-center bg-yellow-100 text-yellow-600">
             <FaMapMarkerAlt size={20} />
           </span>
@@ -27,7 +27,7 @@ const Features = () => {
           </div>
         </div>
 
-        <div className=" p-3 flex border  gap-3  shadow-sm">
+        <div className=" p-3 flex border  gap-3 rounded-lg  shadow-sm">
           <span className=" w-14 h-14 rounded-lg flex justify-center items-center bg-yellow-100 text-yellow-600">
             <FaRegCalendarAlt size={20} />
           </span>
@@ -41,7 +41,7 @@ const Features = () => {
           </div>
         </div>
 
-        <div className=" p-3 flex border  gap-3  shadow-sm">
+        <div className=" p-3 flex border  gap-3 rounded-lg  shadow-sm">
           <span className=" w-14 h-14 rounded-lg flex justify-center items-center bg-yellow-100 text-yellow-600">
             <FaPiggyBank size={20} />
           </span>
@@ -55,7 +55,7 @@ const Features = () => {
           </div>
         </div>
 
-        <div className=" p-3 flex border  gap-3  shadow-sm">
+        <div className=" p-3 flex border  gap-3 rounded-lg  shadow-sm">
           <span className=" w-14 h-14 rounded-lg flex justify-center items-center bg-yellow-100 text-yellow-600">
             <FaTrain size={20} />
           </span>
@@ -69,7 +69,7 @@ const Features = () => {
           </div>
         </div>
 
-        <div className=" p-3 flex border  gap-3  shadow-sm">
+        <div className=" p-3 flex border  gap-3 rounded-lg  shadow-sm">
           <span className=" w-14 h-14 rounded-lg flex justify-center items-center bg-yellow-100 text-yellow-600">
             <FaTrain size={20} />
           </span>
