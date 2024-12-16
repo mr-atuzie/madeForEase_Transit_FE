@@ -1,5 +1,6 @@
 import React from "react";
-import service from "../assets/service.jpg";
+import service from "../assets/service1.jpg";
+import service2 from "../assets/service2.png";
 
 const Services = () => {
   return (
@@ -37,12 +38,12 @@ const Services = () => {
         {/* Service Card 2 */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
           <img
-            src="https://via.placeholder.com/300x200"
+            src={service2}
             alt="Rent Rides"
             className="w-full h-48 object-cover"
           />
           <div className="p-6 text-center">
-            <h3 className="text-lg font-bold text-yellow-600">Rent Rides</h3>
+            <h3 className="text-lg font-bold text-yellow-500">Rent Rides</h3>
             <p className="text-gray-600 text-sm">
               Rent a car for as low as 50,000 Naira per day. Flexible and
               affordable options available.
