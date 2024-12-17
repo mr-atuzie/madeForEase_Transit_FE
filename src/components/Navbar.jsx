@@ -7,11 +7,11 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg w-full fixed top-0 left-0 z-50 overflow-hidden">
+    <nav className="bg-white  w-full fixed top-0 left-0 z-50 overflow-hidden">
       <div className="w-[90%] lg:w-[95%] flex items-center justify-between h-[60px] mx-auto">
         {/* Logo */}
         <div className="flex items-center lg:gap-10">
-          <h1 className="tracking-wide text-sm lg:text-base font-bold text-yellow-600 uppercase">
+          <h1 className="tracking-wide text-xs lg:text-base font-bold text-yellow-500 uppercase">
             Made For Ease Transit
           </h1>
         </div>

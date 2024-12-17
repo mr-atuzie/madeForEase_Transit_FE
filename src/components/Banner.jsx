@@ -68,7 +68,7 @@ const Banner = () => {
 
             {/* Text Content */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 lg:px-12 gap-4 text-white">
-              <h1 className="text-2xl lg:text-4xl font-extrabold leading-snug">
+              <h1 className="text-2xl lg:text-4xl font-extrabold capitalize leading-snug">
                 {slide.title}{" "}
                 <span className="text-yellow-500">{slide.highlight}</span>
               </h1>

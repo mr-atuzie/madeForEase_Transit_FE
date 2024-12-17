@@ -62,6 +62,7 @@ const Services = () => {
             key={service.id}
             className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative "
           >
+            <div className="absolute -top-20 -right-20 z-20 bg-yellow-400/20 w-40 h-40 object-cover rounded-full"></div>
             <div className="absolute -bottom-20 -left-20 z-20 bg-yellow-400/20 w-40 h-40 object-cover rounded-full"></div>
             {/* Image with Overlay */}
             <div className="relative">

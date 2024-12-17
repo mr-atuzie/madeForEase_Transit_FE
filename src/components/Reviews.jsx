@@ -142,7 +142,7 @@ const Reviews = () => {
 
                   {/* Background Bubbles */}
                   <div className="absolute -bottom-10 -right-8 w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 z-20"></div>
-                  <div className="absolute -top-24 -left-6 w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 z-20"></div>
+                  <div className="absolute -top-14 -left-7 w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 z-20"></div>
 
                   {/* Image Overlay */}
                   {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
