@@ -51,7 +51,7 @@ const Reviews = () => {
     <div className="w-full py-8">
       <div className="w-[90%] mx-auto">
         <div className="flex flex-col mb-5 justify-center items-center">
-          <h1 className="text-lg text-center font-bold">Testimonials</h1>
+          <h1 className="text-3xl text-center font-bold">Testimonials</h1>
           <p className="text-yellow-500 text-center font-medium text-sm">
             What our customers say
           </p>
@@ -142,7 +142,7 @@ const Reviews = () => {
 
                   {/* Background Bubbles */}
                   <div className="absolute -bottom-10 -right-8 w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 z-20"></div>
-                  <div className="absolute -top-14 -left-7 w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 z-20"></div>
+                  <div className="absolute -top-16 -left-7 w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 z-20"></div>
 
                   {/* Image Overlay */}
                   {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
