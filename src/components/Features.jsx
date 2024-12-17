@@ -6,7 +6,7 @@ import { FaTruck } from "react-icons/fa6";
 
 const Features = () => {
   return (
-    <div className="w-[90%] lg:w-[95%] py-8 mx-auto">
+    <div className="w-[90%] lg:w-[95%] relative py-8 mx-auto">
       {/* Section Title */}
       <div className="flex flex-col mb-6 justify-center items-center">
         <h1 className="text-lg lg:text-2xl text-center font-bold text-gray-800">
@@ -17,8 +17,12 @@ const Features = () => {
         </p>
       </div>
       {/* Bottom Bubbles */}
-      <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0"></div>
-      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0"></div>
+      <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0">
+        t
+      </div>
+      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0">
+        b
+      </div>
 
       {/* Service Cards Container */}
       <div className="flex flex-col w-full lg:grid lg:grid-cols-3 lg:gap-6 gap-4 items-center justify-center mx-auto">

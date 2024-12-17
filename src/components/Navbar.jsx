@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { MdOutlineClose } from "react-icons/md";
+import React from "react";
+// import { NavLink } from "react-router-dom";
+// import { RxHamburgerMenu } from "react-icons/rx";
+// import { MdOutlineClose } from "react-icons/md";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState(false);
+  // const [menu, setMenu] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg w-full  flex items-center h-[60px] fixed top-0 z-50">
+    <nav className="bg-white shadow-lg w-full  flex items-center left-0 h-[60px] fixed top-0 z-50">
       <div className="w-[90%] lg:w-[95%] flex items-center justify-between mx-auto">
-        <div className="flex items-center gap-10">
+        <div className="flex items-center lg:gap-10">
           <h1 className="tracking-wide text-xs lg:text-sm font-bold text-yellow-600 uppercase">
             Made For Ease Transit
           </h1>
 
-          <ul className="hidden lg:flex gap-6 items-center">
+          {/* <ul className="hidden lg:flex gap-6 items-center">
             <li>
               <NavLink
                 to="/fund-wallet"
@@ -78,10 +78,10 @@ const Navbar = () => {
                 My account
               </NavLink>
             </li>
-          </ul>
+          </ul> */}
         </div>
 
-        <div className="hidden lg:flex items-center gap-6">
+        {/* <div className="hidden lg:flex items-center gap-6">
           <NavLink to="/login">
             <button className="border-2 font-medium border-gray-700 rounded-md px-4 py-2 hover:bg-gray-100 transition-all">
               Log in
@@ -93,16 +93,16 @@ const Navbar = () => {
               Register
             </button>
           </NavLink>
-        </div>
+        </div> */}
 
         {/* Hamburger Button */}
-        <button onClick={() => setMenu(!menu)} className="lg:hidden z-50">
+        {/* <button onClick={() => setMenu(!menu)} className="lg:hidden z-50">
           {menu ? <MdOutlineClose size={25} /> : <RxHamburgerMenu size={25} />}
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Menu */}
-      {menu && (
+      {/* {menu && (
         <div className="fixed z-50 top-0 right-0 bg-black/50 w-full h-screen">
           <div className="menu-container w-[60vw] bg-white h-full p-6">
             <ul className="flex flex-col gap-4">
@@ -186,7 +186,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      )}
+      )} */}
     </nav>
   );
 };
