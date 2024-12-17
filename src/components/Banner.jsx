@@ -55,7 +55,7 @@ const Banner = () => {
         },
       ].map((slide, index) => (
         <SwiperSlide key={index}>
-          <div className="relative w-[95%] mx-auto rounded-lg h-[60vh] lg:h-[80vh] overflow-hidden group">
+          <div className="relative w-[95%] mx-auto mt-8 rounded-lg h-[60vh] lg:h-[80vh] overflow-hidden group">
             {/* Image with Scale Animation */}
             <img
               src={slide.image}
