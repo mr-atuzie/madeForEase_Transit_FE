@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="w-[90%] lg:w-[95%] flex items-center justify-between h-[60px] mx-auto">
         {/* Logo */}
         <div className="flex items-center lg:gap-10">
-          <h1 className="tracking-wide text-xs lg:text-base font-bold text-yellow-500 uppercase">
+          <h1 className="tracking-wide text-xs lg:text-base font-bold  uppercase">
             Made For Ease Transit
           </h1>
         </div>
@@ -19,9 +19,9 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex gap-6 items-center">
           {[
-            "Fund wallet",
-            "Withdrawal",
-            "Invest",
+            "Features",
+            "Services",
+            "Contact Us",
             "Invest History",
             "Transactions",
             "Referral",
@@ -73,15 +73,7 @@ const Navbar = () => {
       >
         <div className="w-[60vw] bg-white h-full p-6 shadow-lg">
           <ul className="flex flex-col gap-6">
-            {[
-              "Fund wallet",
-              "Withdrawal",
-              "Invest",
-              "Invest History",
-              "Transactions",
-              "Referral",
-              "My account",
-            ].map((item, index) => (
+            {["Features", "Services", "Contact Us"].map((item, index) => (
               <li key={index}>
                 <NavLink
                   to={`/${item.toLowerCase().replace(" ", "-")}`}
@@ -102,7 +94,7 @@ const Navbar = () => {
                   onClick={() => setMenu(false)}
                   className="w-full bg-gray-200 rounded-md py-2 hover:bg-gray-300 transition-all"
                 >
-                  Log in
+                  Go to shop
                 </button>
               </NavLink>
             </li>
