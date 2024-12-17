@@ -59,10 +59,12 @@ const Features = () => {
         ].map((service, index) => (
           <div
             key={index}
-            className="p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
+            className="p-4 border rounded-lg shadow-md border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
           >
-            <span className="w-14 h-14 flex justify-center items-center rounded-full border border-yellow-100 bg-yellow-100 text-yellow-600 shrink-0">
-              {service.icon}
+            <span className="w-16 h-16 flex justify-center items-center rounded-full bg-gradient-to-r from-yellow-200 to-yellow-400 text-yellow-800 shrink-0 shadow-lg">
+              <span className="w-14 h-14 flex justify-center items-center rounded-full  border-yellow-100 bg-yellow-100 text-yellow-600 shrink-0">
+                {service.icon}
+              </span>
             </span>
             <div className="flex flex-col">
               <h1 className="font-semibold text-sm lg:text-base text-gray-800">

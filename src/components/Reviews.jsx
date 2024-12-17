@@ -140,9 +140,9 @@ const Reviews = () => {
                 <SwiperSlide key={index}>
                   <div className="relative shadow-lg border-2 border-yellow-300 rounded-lg p-4 lg:p-6 bg-white overflow-hidden">
                     {/* Decorative Bubbles */}
-                    <div className="absolute -z-10 -bottom-10 -right-10 w-32 h-32 bg-yellow-200 rounded-full opacity-40"></div>
-                    <div className="absolute -z-10 -top-12 -left-8 w-28 h-28 bg-yellow-300 rounded-full opacity-40"></div>
-                    <div className="absolute -z-10 bottom-1/4 left-1/4 w-16 h-16 bg-yellow-400 rounded-full opacity-20"></div>
+                    <div className="absolute -z-10 -top-6 -left-6 w-24 h-24 bg-yellow-300 rounded-full opacity-30"></div>
+                    <div className="absolute -z-10 bottom-10 left-1/4 w-20 h-20 bg-yellow-400 rounded-full opacity-20"></div>
+                    <div className="absolute -z-10 -bottom-6 -right-6 w-28 h-28 bg-yellow-500 rounded-full opacity-25"></div>
 
                     {/* Header Section */}
                     <div className="flex justify-between items-center mb-4">
@@ -181,8 +181,9 @@ const Reviews = () => {
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consequatur neque debitis vel porro, cupiditate aliquam, consectetur sed quisquam numquam asperiores accusantium."}
                     </p>
 
-                    {/* Bottom Decorative Bubble */}
-                    <div className="absolute -z-10 -bottom-14 left-1/3 w-24 h-24 bg-yellow-400 rounded-full opacity-30"></div>
+                    {/* More Decorative Bubbles */}
+                    <div className="absolute -z-10 top-1/4 right-1/3 w-16 h-16 bg-yellow-300 rounded-full opacity-20"></div>
+                    <div className="absolute -z-10 bottom-1/4 left-10 w-12 h-12 bg-yellow-400 rounded-full opacity-20"></div>
                   </div>
                 </SwiperSlide>
               );
