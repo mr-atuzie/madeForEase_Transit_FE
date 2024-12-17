@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-lg w-full font-sans flex items-center h-[60px] fixed top-0 z-50">
       <div className="w-[90%] lg:w-[95%] flex items-center justify-between mx-auto">
         <div className="flex items-center gap-10">
-          <h1 className="tracking-wider text-sm font-bold text-gray-800 uppercase">
+          <h1 className="tracking-wide text-xs lg:text-sm font-bold text-yellow-600 uppercase">
             Made For Ease Transit
           </h1>
 
