@@ -46,7 +46,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="w-[90%]  lg:w-[95%] py-8 mx-auto relative">
+    <div className="w-[90%] lg:w-[95%] py-8 mx-auto relative">
       {/* Header Section */}
       <div className="flex flex-col mb-8 justify-center items-center">
         <h1 className="text-3xl z-40 text-center font-bold text-yellow-500">
@@ -75,7 +75,7 @@ const Services = () => {
                 alt={service.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="absolute inset-0 bg-yellow-500/30"></div>
+              <div className="absolute inset-0 bg-black/30"></div>
             </div>
 
             {/* Card Content */}
