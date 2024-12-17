@@ -110,7 +110,7 @@ const Reviews = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="shadow-lg border-2 border-yellow-100 relative overflow-hidden rounded-lg p-2.5 lg:p-5 transition-transform hover:scale-105">
+                <div className="shadow-lg  relative overflow-hidden rounded-lg p-2.5 lg:p-5 transition-transform hover:scale-105">
                   <div className="z-50 flex justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <img
