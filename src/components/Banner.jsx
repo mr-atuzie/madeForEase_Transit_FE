@@ -30,32 +30,32 @@ const Banner = () => {
           title: "Simplifying the art of",
           highlight: "Transportation",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum cum nam alias at rerum, fugit eum non!",
+            "Effortless rides, seamless routes, and stress-free travel for your daily commutes.",
         },
         {
           image: banner2,
           title: "Taking Travel To New Heights In",
           highlight: "Port Harcourt City",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum cum nam alias at rerum, fugit eum non!",
+            "Explore the beauty of Port Harcourt with our reliable and modern travel solutions.",
         },
         {
           image: banner4,
           title: "Let us bring the",
           highlight: "Supermarket",
           description:
-            "Give us your shopping list, sit back, and let us shop for you.",
+            "Save time and energy — let us shop, pack, and deliver your groceries to your doorstep.",
         },
         {
           image: banner3,
           title: "Rent a car per day for as low as",
           highlight: "₦50,000",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum cum nam alias at rerum, fugit eum non!",
+            "Affordable car rentals for business, travel, and leisure — luxury made accessible.",
         },
       ].map((slide, index) => (
         <SwiperSlide key={index}>
-          <div className="relative w-[95%] mx-auto rounded-md h-[70vh] lg:h-[80vh] overflow-hidden group">
+          <div className="relative w-[95%] mx-auto rounded-lg h-[60vh] lg:h-[80vh] overflow-hidden group">
             {/* Image with Scale Animation */}
             <img
               src={slide.image}
