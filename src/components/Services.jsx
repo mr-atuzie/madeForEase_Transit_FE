@@ -49,24 +49,22 @@ const Services = () => {
     <div className="w-[90%] lg:w-[95%] py-8 mx-auto relative">
       {/* Header Section */}
       <div className="flex flex-col mb-8 justify-center items-center">
-        <h1 className="text-3xl z-40 text-center font-bold text-yellow-500">
-          Our Services
-        </h1>
-        <p className="text-gray-600 z-40 font-medium text-center text-sm mt-2">
+        <h1 className="text-3xl z-40 text-center font-bold">Our Services</h1>
+        <p className="text-yellow-500 z-40 font-medium text-center text-sm mt-2">
           Simplifying the Art of Transportation
         </p>
       </div>
 
       {/* Bottom Bubbles */}
-      {/* <div className="absolute -top-10 -left-24 w-80 h-80 bg-yellow-400/20 rounded-full z-0"></div>
-      <div className="absolute -bottom-10 -right-32 w-52 h-52 bg-yellow-400/20 rounded-full z-0"></div> */}
+      <div className="absolute -top-10 -left-24 w-80 h-80 bg-yellow-400/20 rounded-full z-0"></div>
+      <div className="absolute -bottom-10 -right-32 w-52 h-52 bg-yellow-400/20 rounded-full z-0"></div>
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative border-2 border-yellow-100"
+            className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative "
           >
             <div className="absolute -bottom-20 -left-20 z-20 bg-yellow-400/20 w-40 h-40 object-cover rounded-full"></div>
             {/* Image with Overlay */}

@@ -12,17 +12,13 @@ const Features = () => {
         <h1 className="text-lg lg:text-3xl text-yellow-500 z-40 text-center font-bold ">
           Why Choose Us
         </h1>
-        <p className="z-40 text-center font-medium text-sm lg:text-base">
+        <p className="z-40 text text-center font-medium text-sm lg:text-base">
           Fast, reliable transit made for your ease.
         </p>
       </div>
       {/* Bottom Bubbles */}
-      {/* <div className="absolute -top-10 -left-32  w-80 h-80 bg-yellow-400/20 rounded-full z-0">
-        t
-      </div>
-      <div className="absolute -bottom-10 -right-32 w-40 h-40 bg-yellow-400/20 rounded-full z-0">
-        b
-      </div> */}
+      <div className="absolute -top-10 -left-32  w-80 h-80 bg-yellow-400/20 rounded-full z-0"></div>
+      <div className="absolute -bottom-10 -right-32 w-40 h-40 bg-yellow-400/20 rounded-full z-0"></div>
 
       {/* Service Cards Container */}
       <div className="flex flex-col w-full lg:grid lg:grid-cols-3 lg:gap-6 gap-4 items-center justify-center mx-auto">
