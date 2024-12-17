@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
@@ -6,26 +6,8 @@ import { MdOutlineClose } from "react-icons/md";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
-  // Use useCallback to memoize the function so it doesn't change between renders
-  const handleOutsideClick = useCallback(
-    (e) => {
-      if (!e.target.closest(".menu-container") && menu) {
-        setMenu(false);
-      }
-    },
-    [menu]
-  ); // Now menu is a dependency of handleOutsideClick
-
-  React.useEffect(() => {
-    // Event listener for clicking outside the menu
-    document.addEventListener("click", handleOutsideClick);
-    return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
-  }, [handleOutsideClick]); // use handleOutsideClick as a dependency
-
   return (
-    <nav className="bg-white shadow-lg w-full font-sans flex items-center h-[60px] fixed top-0 z-50">
+    <nav className="bg-white shadow-lg w-full  flex items-center h-[60px] fixed top-0 z-50">
       <div className="w-[90%] lg:w-[95%] flex items-center justify-between mx-auto">
         <div className="flex items-center gap-10">
           <h1 className="tracking-wide text-xs lg:text-sm font-bold text-yellow-600 uppercase">

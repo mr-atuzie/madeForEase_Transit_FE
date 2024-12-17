@@ -16,6 +16,9 @@ const Features = () => {
           Fast, reliable transit made for your ease.
         </p>
       </div>
+      {/* Bottom Bubbles */}
+      <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0"></div>
+      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0"></div>
 
       {/* Service Cards Container */}
       <div className="flex flex-col w-full lg:grid lg:grid-cols-3 lg:gap-6 gap-4 items-center justify-center mx-auto">
@@ -60,7 +63,7 @@ const Features = () => {
         ].map((service, index) => (
           <div
             key={index}
-            className="p-4 border relative rounded-lg shadow-md border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
+            className="p-4 border z-40 relative rounded-lg shadow-md border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
           >
             {/* Image Overlay */}
             <div className="absolute -bottom-4 -right-4 z-20 bg-gray-100 w-24 h-24 object-cover rounded-full  group-hover:opacity-30 transition-opacity duration-300"></div>

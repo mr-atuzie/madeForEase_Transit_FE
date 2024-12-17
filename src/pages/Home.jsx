@@ -1,5 +1,5 @@
 import React from "react";
-// import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 // import Faq from "../components/Faq";
@@ -10,7 +10,7 @@ import Services from "../components/Services";
 const Home = () => {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <Banner />
       <Features />
       <Services />

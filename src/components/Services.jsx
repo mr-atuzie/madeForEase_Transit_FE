@@ -46,13 +46,13 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="w-[90%] lg:w-[95%] py-8 mx-auto relative">
+    <div className="w-[90%]  lg:w-[95%] py-8 mx-auto relative">
       {/* Header Section */}
       <div className="flex flex-col mb-8 justify-center items-center">
-        <h1 className="text-3xl text-center font-bold text-yellow-500">
+        <h1 className="text-3xl z-40 text-center font-bold text-yellow-500">
           Our Services
         </h1>
-        <p className="text-gray-600 font-medium text-center text-sm mt-2">
+        <p className="text-gray-600 z-40 font-medium text-center text-sm mt-2">
           Simplifying the Art of Transportation
         </p>
       </div>
@@ -66,7 +66,7 @@ const Services = () => {
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative border-2 border-yellow-500"
+            className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative border-2 border-yellow-100"
           >
             {/* Image with Overlay */}
             <div className="relative">
