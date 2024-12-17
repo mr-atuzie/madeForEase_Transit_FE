@@ -24,7 +24,7 @@ const Reviews = () => {
       img: "https://i0.wp.com/ridethewave.co/wp-content/uploads/2023/11/RTW_9486_websize.jpg?resize=739%2C924&ssl=1",
       name: "Osas Iptimi",
       job: "Doctor",
-      text: "I think they have one of the fastest srvice, I have used. ",
+      text: "I think they have one of the fastest service, I have used. ",
     },
     {
       img: "https://thelightcommittee.com/wp-content/uploads/elementor/thumbs/studio-business-headshot-of-a-black-man-in-Los-Angeles-qep2bstk7vlgl6yzkdozfxz606pu8t2vgp6pzqd4pc.jpg",
@@ -115,15 +115,15 @@ const Reviews = () => {
                     <div className="flex items-center gap-2">
                       <img
                         src={testimonial.img}
-                        className="w-12 h-12 rounded-full object-cover border-2 border-yellow-500"
+                        className="w-12 h-12 rounded-full z-50 object-cover border-2 border-yellow-500"
                         alt={testimonial.name}
                         loading="lazy"
                       />
                       <div>
-                        <h3 className="capitalize text-lg font-semibold text-gray-800">
+                        <h3 className="capitalize text-lg z-50 font-semibold text-gray-800">
                           {testimonial.name}
                         </h3>
-                        <p className="capitalize text-xs text-gray-500">
+                        <p className="capitalize z-50 text-xs text-gray-500">
                           {testimonial.job}
                         </p>
                       </div>
@@ -136,7 +136,7 @@ const Reviews = () => {
                     </div>
                   </div>
 
-                  <p className="text-sm text-gray-700 mb-4">
+                  <p className="text-sm z-50 text-gray-700 mb-4">
                     {testimonial.text}
                   </p>
 
