@@ -1,50 +1,208 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useCallback } from "react";
+import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+
+  // Use useCallback to memoize the function so it doesn't change between renders
+  const handleOutsideClick = useCallback(
+    (e) => {
+      if (!e.target.closest(".menu-container") && menu) {
+        setMenu(false);
+      }
+    },
+    [menu]
+  ); // Now menu is a dependency of handleOutsideClick
+
+  React.useEffect(() => {
+    // Event listener for clicking outside the menu
+    document.addEventListener("click", handleOutsideClick);
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [handleOutsideClick]); // use handleOutsideClick as a dependency
+
   return (
-    <nav className="  bg-white  w-full font2 flex items-center h-[50px]">
-      <div className=" w-[90%] lg:w-[95%]  flex items-center justify-between mx-auto">
-        <div className=" flex items-center gap-10">
-          <h1 className=" tracking-wider text-xs text-start uppercase  lg:text-sm font-bold">
+    <nav className="bg-white shadow-lg w-full font-sans flex items-center h-[60px] fixed top-0 z-50">
+      <div className="w-[90%] lg:w-[95%] flex items-center justify-between mx-auto">
+        <div className="flex items-center gap-10">
+          <h1 className="tracking-wider text-sm font-bold text-gray-800 uppercase">
             Made For Ease Transit
           </h1>
 
-          <ul className="   hidden lg:flex gap-6 items-center">
-            <li className=" font-semibold">Fund wallet</li>
-            <li className=" font-semibold">Withdrawal</li>
-            <li className=" font-semibold">Invest</li>
-            <li className=" font-semibold">Invest History</li>
-            <li className=" font-semibold">Transactions</li>
-            <li className=" font-semibold">Referral</li>
-            <li className=" font-semibold">My account</li>
+          <ul className="hidden lg:flex gap-6 items-center">
+            <li>
+              <NavLink
+                to="/fund-wallet"
+                className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                activeClassName="text-yellow-500 font-bold"
+              >
+                Fund wallet
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/withdrawal"
+                className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                activeClassName="text-yellow-500 font-bold"
+              >
+                Withdrawal
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/invest"
+                className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                activeClassName="text-yellow-500 font-bold"
+              >
+                Invest
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/invest-history"
+                className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                activeClassName="text-yellow-500 font-bold"
+              >
+                Invest History
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/transactions"
+                className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                activeClassName="text-yellow-500 font-bold"
+              >
+                Transactions
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/referral"
+                className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                activeClassName="text-yellow-500 font-bold"
+              >
+                Referral
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/my-account"
+                className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                activeClassName="text-yellow-500 font-bold"
+              >
+                My account
+              </NavLink>
+            </li>
           </ul>
         </div>
 
-        <div className="  hidden lg:flex  items-center gap-6">
-          <Link to={"/login"}>
-            <button className=" border-2 font-medium border-black rounded-md px-4 py-2">
+        <div className="hidden lg:flex items-center gap-6">
+          <NavLink to="/login">
+            <button className="border-2 font-medium border-gray-700 rounded-md px-4 py-2 hover:bg-gray-100 transition-all">
               Log in
             </button>
-          </Link>
+          </NavLink>
 
-          <Link to={"/register"}>
-            <button className=" font-medium bg-black text-white rounded-md px-4 py-2">
+          <NavLink to="/register">
+            <button className="font-medium bg-black text-white rounded-md px-4 py-2 hover:bg-gray-800 transition-all">
               Register
             </button>
-          </Link>
+          </NavLink>
         </div>
 
-        <button onClick={() => setMenu(!menu)} className=" z-50   lg:hidden ">
+        {/* Hamburger Button */}
+        <button onClick={() => setMenu(!menu)} className="lg:hidden z-50">
           {menu ? <MdOutlineClose size={25} /> : <RxHamburgerMenu size={25} />}
         </button>
       </div>
+
+      {/* Mobile Menu */}
       {menu && (
-        <div className=" z-40 fixed lg:hidden top-0 right-0 bg-black/10  w-full h-screen">
-          <div className=" w-[60vw] bg-white h-screen p-4">stuff</div>
+        <div className="fixed top-0 right-0 bg-black/50 w-full h-screen">
+          <div className="menu-container w-[60vw] bg-white h-full p-6">
+            <ul className="flex flex-col gap-4">
+              <li>
+                <NavLink
+                  to="/fund-wallet"
+                  className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                  activeClassName="text-yellow-500 font-bold"
+                >
+                  Fund wallet
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/withdrawal"
+                  className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                  activeClassName="text-yellow-500 font-bold"
+                >
+                  Withdrawal
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/invest"
+                  className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                  activeClassName="text-yellow-500 font-bold"
+                >
+                  Invest
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/invest-history"
+                  className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                  activeClassName="text-yellow-500 font-bold"
+                >
+                  Invest History
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/transactions"
+                  className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                  activeClassName="text-yellow-500 font-bold"
+                >
+                  Transactions
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/referral"
+                  className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                  activeClassName="text-yellow-500 font-bold"
+                >
+                  Referral
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/my-account"
+                  className="font-medium text-gray-700 hover:text-yellow-500 transition-all"
+                  activeClassName="text-yellow-500 font-bold"
+                >
+                  My account
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/login">
+                  <button className="w-full text-center bg-gray-200 rounded-md py-2 hover:bg-gray-300 transition-all">
+                    Log in
+                  </button>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/register">
+                  <button className="w-full text-center bg-black text-white rounded-md py-2 hover:bg-gray-800 transition-all">
+                    Register
+                  </button>
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
       )}
     </nav>
