@@ -21,25 +21,25 @@ import "swiper/css/autoplay";
 const Reviews = () => {
   const testimonials = [
     {
-      img: "https://www.example.com/img1.jpg",
+      img: "https://i0.wp.com/ridethewave.co/wp-content/uploads/2023/11/RTW_9486_websize.jpg?resize=739%2C924&ssl=1",
       name: "Osas Iptimi",
       job: "Doctor",
-      text: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+      text: "I think they have one of the fastest srvice, I have used. ",
     },
     {
-      img: "https://www.example.com/img2.jpg",
+      img: "https://thelightcommittee.com/wp-content/uploads/elementor/thumbs/studio-business-headshot-of-a-black-man-in-Los-Angeles-qep2bstk7vlgl6yzkdozfxz606pu8t2vgp6pzqd4pc.jpg",
       name: "Christopher Omokachi",
       job: "Trader",
       text: "Great service and amazing experience. Highly recommend!",
     },
     {
-      img: "https://www.example.com/img3.jpg",
+      img: "https://i0.wp.com/ridethewave.co/wp-content/uploads/2023/11/RTW0041-Edit_websize.jpg?resize=739%2C924&ssl=1",
       name: "Israel Amadi",
       job: "OAP",
       text: "Fantastic results! Very pleased with the outcome.",
     },
     {
-      img: "https://www.example.com/img4.jpg",
+      img: "https://sharpfocusphoto.com/wp-content/uploads/2020/08/DSC_0067.jpg",
       name: "Ahmed Musa",
       job: "Footballer",
       text: "Excellent service, will definitely be using this again.",
@@ -145,13 +145,13 @@ const Reviews = () => {
                   <div className="absolute -top-12 -left-6 w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 z-20"></div>
 
                   {/* Image Overlay */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
+                  {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
                     <img
                       src={testimonial.img}
                       className="w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover opacity-60"
                       alt={testimonial.name}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </SwiperSlide>
             ))}
