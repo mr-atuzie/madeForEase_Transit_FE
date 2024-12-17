@@ -10,149 +10,85 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import { Autoplay } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <Swiper // install Swiper modules
+    <Swiper
       modules={[Autoplay]}
-      // spaceBetween={50}
       slidesPerView={1}
-      // navigation
       pagination={{ clickable: true }}
-      // scrollbar={{ draggable: true }}
       autoplay={{
-        delay: 1500,
+        delay: 3000,
         disableOnInteraction: false,
       }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
+      className="w-full"
     >
-      <SwiperSlide>
-        <div className=" relative font2 w-[95%] mx-auto rounded-lg  h-[50vh] lg:h-[80vh]">
-          <img
-            className=" w-full  object-cover mx-auto rounded-lg h-full"
-            src={banner}
-            alt=""
-          />
+      {[
+        {
+          image: banner,
+          title: "Simplifying the art of",
+          highlight: "Transportation",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum cum nam alias at rerum, fugit eum non!",
+        },
+        {
+          image: banner2,
+          title: "Taking Travel To New Heights In",
+          highlight: "Port Harcourt City",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum cum nam alias at rerum, fugit eum non!",
+        },
+        {
+          image: banner4,
+          title: "Let us bring the",
+          highlight: "Supermarket",
+          description:
+            "Give us your shopping list, sit back, and let us shop for you.",
+        },
+        {
+          image: banner3,
+          title: "Rent a car per day for as low as",
+          highlight: "₦50,000",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nostrum cum nam alias at rerum, fugit eum non!",
+        },
+      ].map((slide, index) => (
+        <SwiperSlide key={index}>
+          <div className="relative w-[95%] mx-auto rounded-md h-[70vh] lg:h-[80vh] overflow-hidden group">
+            {/* Image with Scale Animation */}
+            <img
+              src={slide.image}
+              className="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              alt="Banner"
+            />
 
-          <div className=" absolute top-0 bg-black/40 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
-            <h1 className=" text-2xl font-bold text-white">
-              Simplifying the art of{" "}
-              <span className=" text-yellow-600">Transportation</span>{" "}
-            </h1>
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>
 
-            <p className=" text-gray-200  text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              nostrum cum nam alias at rerum, fugit eum non!
-            </p>
+            {/* Text Content */}
+            <div className="absolute inset-0 flex flex-col justify-center px-6 lg:px-12 gap-4 text-white">
+              <h1 className="text-2xl lg:text-4xl font-bold leading-snug">
+                {slide.title}{" "}
+                <span className="text-yellow-500">{slide.highlight}</span>
+              </h1>
+              <p className="text-sm lg:text-base text-gray-200 max-w-lg">
+                {slide.description}
+              </p>
 
-            <div className=" flex items-center gap-4">
-              <button className=" px-4 p-2 rounded-lg bg-yellow-600 text-sm">
-                Get started
-              </button>
-
-              <button className=" px-4 p-2 rounded-lg bg-yellow-600 text-sm">
-                Learn more
-              </button>
+              {/* Buttons */}
+              <div className="flex gap-4">
+                <button className="px-6 py-2 bg-yellow-500 text-sm lg:text-base font-medium rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300 ease-in-out">
+                  Get Started
+                </button>
+                <button className="px-6 py-2 bg-white text-yellow-500 text-sm lg:text-base font-medium rounded-lg shadow-md hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out">
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className=" relative font2 w-[95%] mx-auto rounded-lg  h-[50vh] lg:h-[80vh]">
-          <img
-            className=" w-full  object-cover mx-auto rounded-lg h-full"
-            src={banner2}
-            alt=""
-          />
-
-          <div className=" absolute top-0 bg-black/40 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
-            <h1 className=" text-2xl font-bold text-white">
-              Takng Travel To New Heights In{" "}
-              <span className=" text-yellow-600">Port Harcourt City</span>{" "}
-            </h1>
-
-            <p className=" text-gray-00 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              nostrum cum nam alias at rerum, fugit eum non!
-            </p>
-
-            <div className=" flex items-center gap-4">
-              <button className=" px-4 p-2 rounded-lg bg-yellow-600 text-sm">
-                Get started
-              </button>
-
-              <button className=" px-4 p-2 rounded-lg bg-yellow-600 text-sm">
-                Learn more
-              </button>
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className=" relative font2 w-[95%] mx-auto rounded-lg  h-[50vh] lg:h-[80vh]">
-          <img
-            className=" w-full  object-cover mx-auto rounded-lg h-full"
-            src={banner4}
-            alt=""
-          />
-
-          <div className=" absolute top-0 bg-black/40 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
-            <h1 className=" text-2xl font-bold text-white">
-              Let us bring the
-              <span className=" text-yellow-600">Supermarket</span> to your
-              doorstep.
-            </h1>
-
-            <p className=" text-gray-200 text-sm">
-              Give us your shsopping list,sit back and let us shop for you
-            </p>
-
-            <div className=" flex items-center gap-4">
-              <button className=" px-4 p-2 rounded-lg bg-yellow-600 text-sm">
-                Get started
-              </button>
-
-              <button className=" px-4 p-2 rounded-lg bg-yellow-600 text-sm">
-                Learn more
-              </button>
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className=" relative font2 w-[95%] mx-auto rounded-lg  h-[50vh] lg:h-[80vh]">
-          <img
-            className=" w-full  object-cover mx-auto rounded-lg h-full"
-            src={banner3}
-            alt=""
-          />
-
-          <div className=" absolute top-0 bg-black/40 flex px-4 flex-col justify-center gap-2 bottom-0 left-0 w-full h-full rounded-lg">
-            <h1 className=" text-2xl font-bold text-white">
-              Rent a car per day for as low as
-              <span className=" text-yellow-600">₦50,000</span>{" "}
-            </h1>
-
-            <p className=" text-gray-200 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              nostrum cum nam alias at rerum, fugit eum non!
-            </p>
-
-            <div className=" flex items-center gap-4">
-              <button className=" px-4 p-2 rounded-lg bg-yellow-600 text-sm">
-                Get started
-              </button>
-
-              <button className=" px-4 p-2 rounded-lg bg-yellow-600 text-sm">
-                Learn more
-              </button>
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

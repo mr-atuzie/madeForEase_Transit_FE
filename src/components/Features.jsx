@@ -61,6 +61,8 @@ const Features = () => {
             key={index}
             className="p-4 border rounded-lg shadow-md border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
           >
+            {/* Image Overlay */}
+            <div className="absolute -top-4 -left-4 w-24 h-24 object-cover rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
             <span className="w-16 h-16 flex justify-center items-center rounded-full bg-gradient-to-r from-yellow-200 to-yellow-400 text-yellow-800 shrink-0 shadow-lg">
               <span className="w-14 h-14 flex justify-center items-center rounded-full  border-yellow-100 bg-yellow-100 text-yellow-600 shrink-0">
                 {service.icon}
