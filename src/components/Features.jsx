@@ -1,5 +1,5 @@
 import React from "react";
-import { FaMapMarkerAlt, FaRegCalendarAlt } from "react-icons/fa";
+import { FaRegCalendarAlt } from "react-icons/fa";
 import { FaPiggyBank, FaTrain } from "react-icons/fa6";
 import { RiCustomerService2Fill } from "react-icons/ri";
 
@@ -20,12 +20,12 @@ const Features = () => {
       <div className="flex flex-col w-full lg:grid lg:grid-cols-3 lg:gap-6 gap-4 items-center justify-center mx-auto">
         {/* Service Card */}
         {[
-          {
-            icon: <FaMapMarkerAlt size={28} />,
-            title: "Real-time Tracking",
-            description:
-              "Know exactly where your ride is in real-time. Stay updated and avoid unnecessary wait times.",
-          },
+          // {
+          //   icon: <FaMapMarkerAlt size={28} />,
+          //   title: "Real-time Tracking",
+          //   description:
+          //     "Know exactly where your ride is in real-time. Stay updated and avoid unnecessary wait times.",
+          // },
           {
             icon: <FaRegCalendarAlt size={28} />,
             title: "Flexible Scheduling",
@@ -61,7 +61,7 @@ const Features = () => {
             key={index}
             className="p-4 border rounded-lg shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
           >
-            <span className="w-14 h-14 flex justify-center items-center rounded-lg bg-yellow-100 text-yellow-600 shrink-0">
+            <span className="w-14 h-14 flex justify-center items-center rounded-full border border-yellow-100 bg-yellow-100 text-yellow-600 shrink-0">
               {service.icon}
             </span>
             <div className="flex flex-col">

@@ -6,7 +6,6 @@ import Banner from "../components/Banner";
 import Reviews from "../components/Reviews";
 import Features from "../components/Features";
 import Services from "../components/Services";
-import Test from "../components/Test";
 
 const Home = () => {
   return (
@@ -15,7 +14,6 @@ const Home = () => {
       <Banner />
       <Features />
       <Services />
-      <Test />
       {/* <div className=" font2">
         <div className=" w-[90%] mx-auto">
           <h1 className=" text-center font-extrabold">About Us</h1>
