@@ -5,7 +5,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 const ContactUs = () => {
   return (
     <section className="w-full py-12 bg-gray-50">
-      <div className="w-[90%] relative lg:w-[80%] mx-auto bg-white rounded-lg shadow-lg p-4 lg:p-12">
+      <div className="w-[90%] relative lg:w-[80%] overflow-hidden mx-auto bg-white rounded-lg shadow-lg p-4 lg:p-12">
         {/* Main Heading */}
         <div className="text-center mb-10">
           <h2 className="text-3xl lg:text-4xl z-40 font-bold text-gray-800">
@@ -15,7 +15,7 @@ const ContactUs = () => {
             We’d love to hear from you, Reach out for questions orinquiries.
           </p>
         </div>
-
+        <div></div>
         <div className="absolute -top-20 -right-20 z-20 bg-yellow-400/20 w-40 h-40 object-cover rounded-full"></div>
         <div className="absolute -bottom-20 -left-20 z-20 bg-yellow-400/20 w-40 h-40 object-cover rounded-full"></div>
 
@@ -110,7 +110,7 @@ const ContactUs = () => {
                   id="name"
                   type="text"
                   placeholder="Enter your name"
-                  className="w-full px-4 py-2 border border-gray-300 placeholder:text-sm bg-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  className="w-full px-4 py-2 border border-gray-00 placeholder:text-sm bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
               </div>
 
@@ -125,7 +125,7 @@ const ContactUs = () => {
                   id="email"
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-2 border border-gray-300 placeholder:text-sm bg-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  className="w-full px-4 py-2 border border-gray-300 placeholder:text-sm bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
               </div>
 
@@ -140,7 +140,7 @@ const ContactUs = () => {
                   id="message"
                   rows="5"
                   placeholder="Write your message here..."
-                  className="w-full px-4 py-2 border border-gray-300 placeholder:text-sm bg-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 resize-none"
+                  className="w-full px-4 py-2 border border-gray-300 placeholder:text-sm bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 resize-none"
                 ></textarea>
               </div>
 
