@@ -2,6 +2,7 @@ import React from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { FaPiggyBank, FaTrain } from "react-icons/fa6";
 import { RiCustomerService2Fill } from "react-icons/ri";
+import { FaTruck } from "react-icons/fa6";
 
 const Features = () => {
   return (
@@ -51,7 +52,7 @@ const Features = () => {
               "Our dedicated support team is here 24/7 to assist with any issues or questions.",
           },
           {
-            icon: <RiCustomerService2Fill size={25} />,
+            icon: <FaTruck size={25} />,
             title: "Seamless Parcel Delivery",
             description:
               "Send and receive parcels easily and efficiently, all from one platform.",
@@ -62,17 +63,18 @@ const Features = () => {
             className="p-4 border relative rounded-lg shadow-md border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
           >
             {/* Image Overlay */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 object-cover rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+            <div className="absolute -bottom-4 -right-4 z-20 bg-gray-100 w-24 h-24 object-cover rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+
             <span className="w-16 h-16 flex justify-center items-center rounded-full bg-gradient-to-r from-yellow-200 to-yellow-400 text-yellow-800 shrink-0 shadow-lg">
               <span className="w-14 h-14 flex justify-center items-center rounded-full  border-yellow-100 bg-yellow-100 text-yellow-600 shrink-0">
                 {service.icon}
               </span>
             </span>
             <div className="flex flex-col">
-              <h1 className="font-semibold text-sm lg:text-base text-gray-800">
+              <h1 className="font-semibold z-40 text-sm lg:text-base text-gray-800">
                 {service.title}
               </h1>
-              <p className="text-xs lg:text-sm text-gray-600">
+              <p className="text-xs lg:text-sm z-40 text-gray-600">
                 {service.description}
               </p>
             </div>

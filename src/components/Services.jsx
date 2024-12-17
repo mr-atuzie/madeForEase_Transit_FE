@@ -1,113 +1,94 @@
 import React from "react";
-import service from "../assets/service1.jpg";
+import service1 from "../assets/service1.jpg";
 import service2 from "../assets/service2.png";
 import service3 from "../assets/service3.jpg";
 import service4 from "../assets/service4.jpg";
 import service5 from "../assets/service5.jpeg";
 
+// Service Data
+const servicesData = [
+  {
+    id: 1,
+    title: "Travel With Ease",
+    description:
+      "Fast, reliable transit made for your convenience. Plan your journeys effortlessly.",
+    image: service1,
+  },
+  {
+    id: 2,
+    title: "Rent Rides",
+    description:
+      "Rent a car for as low as 50,000 Naira per day. Flexible and affordable options available.",
+    image: service2,
+  },
+  {
+    id: 3,
+    title: "Send Parcels",
+    description:
+      "Simplify sending parcels with fast, secure, and reliable delivery services.",
+    image: service3,
+  },
+  {
+    id: 4,
+    title: "Receive Parcels",
+    description:
+      "Worry-free parcel receiving with timely delivery right to your doorstep.",
+    image: service4,
+  },
+  {
+    id: 5,
+    title: "Supermarket Delivery",
+    description:
+      "Get your groceries delivered straight to your door quickly and efficiently.",
+    image: service5,
+  },
+];
+
 const Services = () => {
   return (
-    <div className="w-[90%] lg:w-[95%] py-8 mx-auto">
+    <div className="w-[90%] lg:w-[95%] py-8 mx-auto relative">
       {/* Header Section */}
       <div className="flex flex-col mb-8 justify-center items-center">
-        <h1 className="text-3xl text-center font-bold text-gray-800">
+        <h1 className="text-3xl text-center font-bold text-yellow-500">
           Our Services
         </h1>
-        <p className="text-yellow-500 font-medium text-center text-sm mt-2">
+        <p className="text-gray-600 font-medium text-center text-sm mt-2">
           Simplifying the Art of Transportation
         </p>
       </div>
 
+      {/* Bottom Bubbles */}
+      <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0"></div>
+      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0"></div>
+
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Service Card 1 */}
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative">
-          <img
-            src={service}
-            alt="Travel With Ease"
-            className="w-full h-48 object-cover"
-          />
-          <div className="absolute -top-6 -left-8 w-20 h-20 bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 rounded-full z-0"></div>
-          <div className="p-6 text-center relative z-10">
-            <h3 className="text-lg font-bold text-gray-800">
-              Travel With Ease
-            </h3>
-            <p className="text-gray-600 text-sm mt-2">
-              Fast, reliable transit made for your convenience. Plan your
-              journeys effortlessly.
-            </p>
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+        {servicesData.map((service) => (
+          <div
+            key={service.id}
+            className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative"
+          >
+            {/* Image with Overlay */}
+            <div className="relative">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30"></div>
+            </div>
 
-        {/* Service Card 2 */}
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative">
-          <img
-            src={service2}
-            alt="Rent Rides"
-            className="w-full h-48 object-cover"
-          />
-          <div className="absolute -top-6 -right-8 w-20 h-20 bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 rounded-full z-0"></div>
-          <div className="p-6 text-center relative z-10">
-            <h3 className="text-lg font-bold text-yellow-500">Rent Rides</h3>
-            <p className="text-gray-600 text-sm mt-2">
-              Rent a car for as low as 50,000 Naira per day. Flexible and
-              affordable options available.
-            </p>
+            {/* Card Content */}
+            <div className="p-6 text-center">
+              <h3 className="text-lg font-bold text-yellow-500">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 text-sm mt-2">
+                {service.description}
+              </p>
+            </div>
           </div>
-        </div>
-
-        {/* Service Card 3 */}
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative">
-          <img
-            src={service3}
-            alt="Send Parcels"
-            className="w-full h-48 object-cover"
-          />
-          <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 rounded-full z-0"></div>
-          <div className="p-6 text-center relative z-10">
-            <h3 className="text-lg font-bold text-gray-800">Send Parcels</h3>
-            <p className="text-gray-600 text-sm mt-2">
-              Simplify sending parcels with fast, secure, and reliable delivery
-              services.
-            </p>
-          </div>
-        </div>
-
-        {/* Service Card 4 */}
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative">
-          <img
-            src={service4}
-            alt="Receive Parcels"
-            className="w-full h-48 object-cover"
-          />
-          <div className="absolute -top-8 -right-8 w-20 h-20 bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 rounded-full z-0"></div>
-          <div className="p-6 text-center relative z-10">
-            <h3 className="text-lg font-bold text-gray-800">Receive Parcels</h3>
-            <p className="text-gray-600 text-sm mt-2">
-              Worry-free parcel receiving with timely delivery right to your
-              doorstep.
-            </p>
-          </div>
-        </div>
-
-        {/* Service Card 5 */}
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative">
-          <img
-            src={service5}
-            alt="Supermarket Delivery"
-            className="w-full h-48 object-cover"
-          />
-          <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 rounded-full z-0"></div>
-          <div className="p-6 text-center relative z-10">
-            <h3 className="text-lg font-bold text-gray-800">
-              Supermarket Delivery
-            </h3>
-            <p className="text-gray-600 text-sm mt-2">
-              Get your groceries delivered straight to your door quickly and
-              efficiently.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

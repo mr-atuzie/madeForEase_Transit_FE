@@ -121,7 +121,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menu && (
-        <div className="fixed top-0 right-0 bg-black/50 w-full h-screen">
+        <div className="fixed z-50 top-0 right-0 bg-black/50 w-full h-screen">
           <div className="menu-container w-[60vw] bg-white h-full p-6">
             <ul className="flex flex-col gap-4">
               <li>
