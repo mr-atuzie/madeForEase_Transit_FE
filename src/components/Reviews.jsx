@@ -3,13 +3,12 @@ import { IoStar } from "react-icons/io5";
 
 // import Swiper core and required modules
 import {
-  Navigation,
+  // Navigation,
   Pagination,
-  Scrollbar,
-  A11y,
+  // Scrollbar,
+  // A11y,
   Autoplay,
 } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -20,174 +19,142 @@ import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 
 const Reviews = () => {
-  const testimonals = [
+  const testimonials = [
     {
-      img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dougburkephoto.com%2Fblog-post%2F5-posing-tips-for-mens-headshots&psig=AOvVaw38JSmV1S3cGP-UyCp_uAVu&ust=1734396531180000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDgrN6Iq4oDFQAAAAAdAAAAABAI",
-      name: "osas iptimi",
+      img: "https://www.example.com/img1.jpg",
+      name: "Osas Iptimi",
       job: "Doctor",
+      text: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
-      img: "https://media.istockphoto.com/id/1352025984/photo/headshot-of-cheerful-young-businessman.jpg?s=612x612&w=0&k=20&c=6LxOFkwfu3XYgfySJfI1uTpP1JUX4ZIgl_1CdpQBk3s=",
-      name: "Christopher omokachi",
+      img: "https://www.example.com/img2.jpg",
+      name: "Christopher Omokachi",
       job: "Trader",
+      text: "Great service and amazing experience. Highly recommend!",
     },
     {
-      img: "https://images.squarespace-cdn.com/content/v1/631ba8eed2196a6795698665/3690ca61-6a9d-4c93-a2a5-83a5f2aa1648/2022-08-16-Trinet-0540-Martinez-Juan.jpg",
-      name: "Isreal amadi",
+      img: "https://www.example.com/img3.jpg",
+      name: "Israel Amadi",
       job: "OAP",
+      text: "Fantastic results! Very pleased with the outcome.",
     },
     {
-      img: "https://i0.wp.com/ridethewave.co/wp-content/uploads/2023/11/RTW_9486_websize.jpg?resize=739%2C924&ssl=1",
+      img: "https://www.example.com/img4.jpg",
       name: "Ahmed Musa",
       job: "Footballer",
+      text: "Excellent service, will definitely be using this again.",
     },
-    {
-      img: "https://t3.ftcdn.net/jpg/05/83/41/98/360_F_583419866_97XPxjHDJkQ2RKMmGWdgrbqJhEZeQb55.jpg",
-      name: "Obinna chukwu",
-      job: "Accountant",
-    },
-    {
-      img: "https://photos.peterhurley.com/wp-content/uploads/2023/02/alex_0033-2000x1334.jpg",
-      name: "Friday Awolowo",
-      job: "Economist",
-    },
-    {
-      img: "https://media.istockphoto.com/id/1394347360/photo/confident-young-black-businesswoman-standing-at-a-window-in-an-office-alone.jpg?s=612x612&w=0&k=20&c=tOFptpFTIaBZ8LjQ1NiPrjKXku9AtERuWHOElfBMBvY=",
-      name: "Daniel Okpia",
-      job: "pastor",
-    },
+    // Add more testimonials as necessary
   ];
+
   return (
-    <div className="w-full  py-8">
-      <div className=" w-[90%]  mx-auto ">
-        <div className=" flex flex-col mb-5 justify-center items-center">
-          <h1 className=" text-lg text-center font-bold">Testimonials</h1>
-          <p className="text-yellow-500 text-center font-medium  text-sm">
-            What our customer say
+    <div className="w-full py-8">
+      <div className="w-[90%] mx-auto">
+        <div className="flex flex-col mb-5 justify-center items-center">
+          <h1 className="text-lg text-center font-bold">Testimonials</h1>
+          <p className="text-yellow-500 text-center font-medium text-sm">
+            What our customers say
           </p>
         </div>
 
-        {/* desktop slider */}
+        {/* Desktop Slider */}
         <div className="hidden lg:block">
           <Swiper
-            // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            modules={[Pagination, Autoplay]}
             spaceBetween={50}
             slidesPerView={3}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
           >
-            {testimonals.map((testimonal, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <div className=" shadow-lg border-2 border-blue-50 rounded-lg p-5">
-                    <div className=" flex justify-between items-center">
-                      <div className=" flex items-center   my-4 gap-2">
-                        <img
-                          src={testimonal.img}
-                          className=" w-10 h-10 rounded-full object-cover"
-                          alt=""
-                        />
-                        <div>
-                          <h3 className=" capitalize">{testimonal.name}</h3>
-                          <p className=" text-sm text-gray-400 -mt-1">
-                            {testimonal.job}
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className=" flex items-center gap-1 text-yellow-400">
-                        <IoStar size={20} />
-                        <IoStar size={20} />
-                        <IoStar size={20} />
-                        <IoStar size={20} />
-                        <IoStar size={20} />
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <div className="shadow-lg border-2 border-yellow-500 rounded-lg p-5">
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={testimonial.img}
+                        className="w-12 h-12 rounded-full object-cover border-2 border-yellow-500"
+                        alt={testimonial.name}
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3 className="capitalize text-lg font-semibold text-gray-800">
+                          {testimonial.name}
+                        </h3>
+                        <p className="capitalize text-xs text-gray-500">
+                          {testimonial.job}
+                        </p>
                       </div>
                     </div>
 
-                    <p className="">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Tempore consequatur neque debitis vel porro, cupiditate
-                      aliquam, consectetur sed quisquam numquam asperiores
-                      accusantium, tempora nesciunt molestias.
-                    </p>
+                    <div className="flex items-center gap-1 text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <IoStar key={i} size={20} />
+                      ))}
+                    </div>
                   </div>
-                </SwiperSlide>
-              );
-            })}
+
+                  <p className="text-sm text-gray-700">{testimonial.text}</p>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 
-        <div className="  lg:hidden">
+        {/* Mobile Slider */}
+        <div className="lg:hidden">
           <Swiper
-            // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            modules={[Pagination, Autoplay]}
             spaceBetween={50}
             slidesPerView={1}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
           >
-            {testimonals.map((testimonal, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <div className="relative shadow-lg border-2 border-yellow-300 rounded-lg p-4 lg:p-6 bg-white overflow-hidden">
-                    {/* Decorative Bubbles */}
-                    <div className="absolute -z-10 -top-6 -left-6 w-24 h-24 bg-yellow-300 rounded-full opacity-30"></div>
-                    <div className="absolute -z-10 bottom-10 left-1/4 w-20 h-20 bg-yellow-400 rounded-full opacity-20"></div>
-                    <div className="absolute -z-10 -bottom-6 -right-6 w-28 h-28 bg-yellow-500 rounded-full opacity-25"></div>
-
-                    {/* Header Section */}
-                    <div className="flex justify-between items-center mb-4">
-                      {/* User Info */}
-                      <div className="flex items-center gap-3">
-                        <div className="relative">
-                          {/* Bubble Behind Image */}
-                          <span className="absolute -z-10 -top-1 -left-1 w-14 h-14 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-full shadow-md"></span>
-                          <img
-                            src={testimonal.img}
-                            className="w-12 h-12 rounded-full object-cover border-2 border-yellow-300 shadow-sm"
-                            alt={testimonal.name}
-                          />
-                        </div>
-                        <div>
-                          <h3 className="capitalize text-sm font-semibold text-gray-800">
-                            {testimonal.name}
-                          </h3>
-                          <p className="capitalize text-xs text-gray-400 -mt-1">
-                            {testimonal.job}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Star Ratings */}
-                      <div className="flex items-center gap-1 text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <IoStar key={i} size={16} />
-                        ))}
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <div className="shadow-lg border-2 border-yellow-500 relative overflow-hidden rounded-lg p-2.5 lg:p-5 transition-transform hover:scale-105">
+                  <div className="z-50 flex justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={testimonial.img}
+                        className="w-12 h-12 rounded-full object-cover border-2 border-yellow-500"
+                        alt={testimonial.name}
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3 className="capitalize text-lg font-semibold text-gray-800">
+                          {testimonial.name}
+                        </h3>
+                        <p className="capitalize text-xs text-gray-500">
+                          {testimonial.job}
+                        </p>
                       </div>
                     </div>
 
-                    {/* Testimonial Text */}
-                    <p className="text-sm text-gray-700 leading-relaxed">
-                      {testimonal.text ||
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consequatur neque debitis vel porro, cupiditate aliquam, consectetur sed quisquam numquam asperiores accusantium."}
-                    </p>
-
-                    {/* More Decorative Bubbles */}
-                    <div className="absolute -z-10 top-1/4 right-1/3 w-16 h-16 bg-yellow-300 rounded-full opacity-20"></div>
-                    <div className="absolute -z-10 bottom-1/4 left-10 w-12 h-12 bg-yellow-400 rounded-full opacity-20"></div>
+                    <div className="flex items-center gap-1 text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <IoStar key={i} size={15} />
+                      ))}
+                    </div>
                   </div>
-                </SwiperSlide>
-              );
-            })}
+
+                  <p className="text-sm text-gray-700 mb-4">
+                    {testimonial.text}
+                  </p>
+
+                  {/* Background Bubbles */}
+                  <div className="absolute -bottom-10 -right-8 w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 z-20"></div>
+                  <div className="absolute -top-12 -left-6 w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-30 z-20"></div>
+
+                  {/* Image Overlay */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
+                    <img
+                      src={testimonial.img}
+                      className="w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover opacity-60"
+                      alt={testimonial.name}
+                    />
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

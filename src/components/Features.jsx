@@ -27,31 +27,31 @@ const Features = () => {
           //     "Know exactly where your ride is in real-time. Stay updated and avoid unnecessary wait times.",
           // },
           {
-            icon: <FaRegCalendarAlt size={28} />,
+            icon: <FaRegCalendarAlt size={25} />,
             title: "Flexible Scheduling",
             description:
               "Plan trips effortlessly with customizable schedules that fit your lifestyle.",
           },
           {
-            icon: <FaPiggyBank size={28} />,
+            icon: <FaPiggyBank size={25} />,
             title: "Affordable Pricing",
             description:
               "Save money on your daily commute with budget-friendly plans tailored for everyone.",
           },
           {
-            icon: <FaTrain size={28} />,
+            icon: <FaTrain size={25} />,
             title: "Multiple Transport Modes",
             description:
               "Seamlessly transition between buses, trains, and other transport modes, all in one platform.",
           },
           {
-            icon: <RiCustomerService2Fill size={28} />,
+            icon: <RiCustomerService2Fill size={25} />,
             title: "Reliable Customer Support",
             description:
               "Our dedicated support team is here 24/7 to assist with any issues or questions.",
           },
           {
-            icon: <RiCustomerService2Fill size={28} />,
+            icon: <RiCustomerService2Fill size={25} />,
             title: "Seamless Parcel Delivery",
             description:
               "Send and receive parcels easily and efficiently, all from one platform.",
@@ -59,7 +59,7 @@ const Features = () => {
         ].map((service, index) => (
           <div
             key={index}
-            className="p-4 border rounded-lg shadow-md border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
+            className="p-4 border relative rounded-lg shadow-md border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
           >
             {/* Image Overlay */}
             <div className="absolute -top-4 -left-4 w-24 h-24 object-cover rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
