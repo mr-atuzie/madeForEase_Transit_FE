@@ -5,16 +5,19 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 const ContactUs = () => {
   return (
     <section className="w-full py-12 bg-gray-50">
-      <div className="w-[90%] lg:w-[80%] mx-auto bg-white rounded-lg shadow-lg p-4 lg:p-12">
+      <div className="w-[90%] rel lg:w-[80%] mx-auto bg-white rounded-lg shadow-lg p-4 lg:p-12">
         {/* Main Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
+          <h2 className="text-3xl lg:text-4xl z-40 font-bold text-gray-800">
             Contact Us
           </h2>
-          <p className="text-yellow-500 mt-2 text-sm lg:text-base">
+          <p className="text-yellow-500 z-40 mt-2 text-sm lg:text-base">
             We’d love to hear from you, Reach out for questions orinquiries.
           </p>
         </div>
+
+        <div className="absolute -top-20 -right-20 z-20 bg-yellow-400/20 w-40 h-40 object-cover rounded-full"></div>
+        <div className="absolute -bottom-20 -left-20 z-20 bg-yellow-400/20 w-40 h-40 object-cover rounded-full"></div>
 
         {/* Two Columns */}
         <div className="flex flex-col lg:flex-row gap-10">
@@ -36,30 +39,38 @@ const ContactUs = () => {
             </div>
 
             {/* Phone */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 flex items-center justify-center bg-yellow-500 text-white rounded-full">
+            <div className="flex items-center gap-2 lg:gap-4">
+              <div className="lg:w-12 lg:h-12 w-10 h-10 flex items-center justify-center bg-yellow-500 text-white rounded-full">
                 <FaPhoneAlt size={20} />
               </div>
               <div>
-                <h4 className="text-gray-800 font-medium text-lg">Call Us</h4>
-                <p className="text-gray-600 text-sm">+234 123 456 7890</p>
+                <h4 className="text-gray-800 font-medium text-sm lg:text-lg">
+                  Call Us
+                </h4>
+                <p className="text-gray-600 text-xs lg:text-sm">
+                  +234 123 456 7890
+                </p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 flex items-center justify-center bg-yellow-500 text-white rounded-full">
+            <div className="flex items-center gap-2 lg:gap-4">
+              <div className="lg:w-12 lg:h-12 w-10 h-10 flex items-center justify-center bg-yellow-500 text-white rounded-full">
                 <FaEnvelope size={20} />
               </div>
               <div>
-                <h4 className="text-gray-800 font-medium text-lg">Email Us</h4>
-                <p className="text-gray-600 text-sm">contact@easetransit.com</p>
+                <h4 className="text-gray-800 font-medium text-sm lg:text-lg">
+                  Email Us
+                </h4>
+                <p className="text-gray-600 text-xs lg:text-sm">
+                  contact@easetransit.com
+                </p>
               </div>
             </div>
 
             {/* Social Media */}
             <div>
-              <h4 className="text-gray-800 font-medium text-lg mb-3">
+              <h4 className="text-gray-800 font-medium text-sm lg:text-lg mb-3">
                 Connect With Us
               </h4>
               <div className="flex gap-4">
