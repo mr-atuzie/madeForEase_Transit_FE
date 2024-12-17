@@ -6,6 +6,7 @@ import Reviews from "../components/Reviews";
 import Features from "../components/Features";
 import Services from "../components/Services";
 import ContactUs from "../components/ContactUs";
+import FooterBanner from "../components/FooterBanner";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Services />
       <Reviews />
       <ContactUs />
+      <FooterBanner />
       <Footer />
     </div>
   );
