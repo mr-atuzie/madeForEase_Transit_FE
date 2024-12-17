@@ -55,10 +55,6 @@ const Services = () => {
         </p>
       </div>
 
-      {/* Bottom Bubbles */}
-      <div className="absolute -top-10 -left-24 w-80 h-80 bg-yellow-400/20 rounded-full z-0"></div>
-      <div className="absolute -bottom-10 -right-32 w-52 h-52 bg-yellow-400/20 rounded-full z-0"></div>
-
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
         {servicesData.map((service) => (

@@ -115,7 +115,7 @@ const Reviews = () => {
                     <div className="flex items-center gap-2">
                       <img
                         src={testimonial.img}
-                        className="w-12 h-12 rounded-full z-50 object-cover border-2 border-yellow-100"
+                        className="w-12 h-12 rounded-full z-50 object-cover "
                         alt={testimonial.name}
                         loading="lazy"
                       />
