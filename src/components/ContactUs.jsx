@@ -110,7 +110,7 @@ const ContactUs = () => {
                   id="name"
                   type="text"
                   placeholder="Enter your name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  className="w-full px-4 py-2 border border-gray-300 placeholder:text-sm bg-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
               </div>
 
@@ -125,7 +125,7 @@ const ContactUs = () => {
                   id="email"
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  className="w-full px-4 py-2 border border-gray-300 placeholder:text-sm bg-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
               </div>
 
@@ -140,7 +140,7 @@ const ContactUs = () => {
                   id="message"
                   rows="5"
                   placeholder="Write your message here..."
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 resize-none"
+                  className="w-full px-4 py-2 border border-gray-300 placeholder:text-sm bg-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 resize-none"
                 ></textarea>
               </div>
 
