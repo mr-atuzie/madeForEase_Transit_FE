@@ -9,10 +9,10 @@ const Features = () => {
     <div className="w-[90%] lg:w-[95%] relative py-8 mx-auto">
       {/* Section Title */}
       <div className="flex flex-col mb-6 justify-center items-center">
-        <h1 className="text-lg lg:text-2xl text-center font-bold text-gray-800">
+        <h1 className="text-lg lg:text-2xl z-40 text-center font-bold text-gray-800">
           Why Choose Us
         </h1>
-        <p className="text-yellow-500 text-center font-medium text-sm lg:text-base">
+        <p className="text-yellow-500 z-40 text-center font-medium text-sm lg:text-base">
           Fast, reliable transit made for your ease.
         </p>
       </div>
@@ -67,10 +67,10 @@ const Features = () => {
         ].map((service, index) => (
           <div
             key={index}
-            className="p-4 border z-40 relative rounded-lg shadow-md overflow-hidden border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
+            className="p-4 border z-40 bg-white relative rounded-lg shadow-md overflow-hidden border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
           >
             {/* Image Overlay */}
-            <div className="absolute -bottom-4 -right-4 z-20 bg-gray-400/20 w-24 h-24 object-cover rounded-full  group-hover:opacity-30 transition-opacity duration-300"></div>
+            <div className="absolute -bottom-7 -right-4 z-20 bg-yelow-400/20 w-24 h-24 object-cover rounded-full  group-hover:opacity-30 transition-opacity duration-300"></div>
 
             <span className="w-16 h-16 flex justify-center items-center rounded-full bg-gradient-to-r from-yellow-200 to-yellow-400 text-yellow-800 shrink-0 shadow-lg">
               <span className="w-14 h-14 flex justify-center items-center rounded-full  border-yellow-100 bg-yellow-100 text-yellow-600 shrink-0">
