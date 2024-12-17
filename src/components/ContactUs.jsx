@@ -9,11 +9,10 @@ const ContactUs = () => {
         {/* Main Heading */}
         <div className="text-center mb-10">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
-            Contact <span className="text-yellow-500">Us</span>
+            Contact Us
           </h2>
-          <p className="text-gray-600 mt-2 text-sm lg:text-base">
-            We’d love to hear from you! Reach out for questions, collaborations,
-            or inquiries.
+          <p className="text-yellow-500 mt-2 text-sm lg:text-base">
+            We’d love to hear from you, Reach out for questions orinquiries.
           </p>
         </div>
 
@@ -22,15 +21,15 @@ const ContactUs = () => {
           {/* Contact Info */}
           <div className="flex-1 space-y-6">
             {/* Location */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 flex items-center justify-center bg-yellow-500 text-white rounded-full">
+            <div className="flex items-center gap-2 lg:gap-4">
+              <div className="lg:w-12 lg:h-12 w-10 h-10 flex items-center justify-center bg-yellow-500 text-white rounded-full">
                 <FaMapMarkerAlt size={20} />
               </div>
               <div>
-                <h4 className="text-gray-800 font-medium text-lg">
+                <h4 className="text-gray-800 font-medium text-sm lg:text-lg">
                   Our Location
                 </h4>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-xs lg:text-sm">
                   123 Ease Transit Ave, Lagos, Nigeria
                 </p>
               </div>
