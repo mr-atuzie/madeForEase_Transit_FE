@@ -1,55 +1,46 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const FooterBanner = () => {
   return (
-    <div className="relative w-full bg-gray-900 py-8 flex items-center justify-center overflow-hidden">
-      {/* Background effect */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
+    <div className="relative w-full bg-yellow-500 py-10 flex items-center justify-center overflow-hidden">
+      {/* Text Animation Container */}
+      <div className="relative text-center px-4">
+        {/* Animated Main Text */}
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-white text-3xl lg:text-5xl font-bold uppercase tracking-wide leading-tight"
+        >
+          FAST, RELIABLE TRANSIT
+        </motion.h2>
 
-      <div className="relative z-10 text-center px-4">
-        {/* Animated Text */}
-        <h2 className="text-white text-3xl lg:text-4xl font-bold uppercase tracking-wide animate-text-slide">
-          Bringing You The Best Experience
-        </h2>
-
-        <p className="text-gray-300 mt-2 text-sm lg:text-base animate-fade-in">
-          Your journey, our priority.
-        </p>
+        {/* Sub Text Animation */}
+        <motion.h3
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          className="text-white text-xl lg:text-3xl font-medium uppercase mt-2"
+        >
+          MADE FOR YOUR EASE AND CONVENIENCE EVERYDAY
+        </motion.h3>
       </div>
 
-      {/* Animation Styles */}
-      <style jsx>{`
-        @keyframes textSlide {
-          0% {
-            transform: translateY(100%);
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
+      {/* Animated Background Bubbles */}
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1.5, opacity: 0.2 }}
+        transition={{ duration: 2, ease: "easeOut" }}
+        className="absolute -top-10 -left-10 w-48 h-48 bg-yellow-600 rounded-full"
+      ></motion.div>
 
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        .animate-text-slide {
-          animation: textSlide 1.5s ease-out forwards;
-        }
-
-        .animate-fade-in {
-          animation: fadeIn 2s ease-in forwards;
-        }
-      `}</style>
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1.5, opacity: 0.2 }}
+        transition={{ duration: 2, ease: "easeOut", delay: 0.3 }}
+        className="absolute -bottom-10 -right-10 w-48 h-48 bg-yellow-400 rounded-full"
+      ></motion.div>
     </div>
   );
 };
