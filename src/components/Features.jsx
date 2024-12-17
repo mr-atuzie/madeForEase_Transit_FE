@@ -9,18 +9,18 @@ const Features = () => {
     <div className="w-[90%] lg:w-[95%] relative py-8 mx-auto">
       {/* Section Title */}
       <div className="flex flex-col mb-6 justify-center items-center">
-        <h1 className="text-lg lg:text-2xl z-40 text-center font-bold text-gray-800">
+        <h1 className="text-lg lg:text-3xl text-yellow-500 z-40 text-center font-bold ">
           Why Choose Us
         </h1>
-        <p className="text-yellow-500 z-40 text-center font-medium text-sm lg:text-base">
+        <p className="z-40 text-center font-medium text-sm lg:text-base">
           Fast, reliable transit made for your ease.
         </p>
       </div>
       {/* Bottom Bubbles */}
-      <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0">
+      <div className="absolute -top-10 -left-32  w-80 h-80 bg-yellow-400/20 rounded-full z-0">
         t
       </div>
-      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0">
+      <div className="absolute -bottom-10 -right-32 w-40 h-40 bg-yellow-400/20 rounded-full z-0">
         b
       </div>
 
@@ -70,7 +70,7 @@ const Features = () => {
             className="p-4 border z-40 bg-white relative rounded-lg shadow-md overflow-hidden border-yellow-100 flex items-center gap-4 hover:shadow-lg transition-shadow duration-300 w-full"
           >
             {/* Image Overlay */}
-            <div className="absolute -bottom-7 -right-4 z-20 bg-yelow-400/20 w-24 h-24 object-cover rounded-full  group-hover:opacity-30 transition-opacity duration-300"></div>
+            <div className="absolute -bottom-7 -right-4 z-20 bg-yellow-400/20 w-24 h-24 object-cover rounded-full"></div>
 
             <span className="w-16 h-16 flex justify-center items-center rounded-full bg-gradient-to-r from-yellow-200 to-yellow-400 text-yellow-800 shrink-0 shadow-lg">
               <span className="w-14 h-14 flex justify-center items-center rounded-full  border-yellow-100 bg-yellow-100 text-yellow-600 shrink-0">

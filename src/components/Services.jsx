@@ -58,16 +58,17 @@ const Services = () => {
       </div>
 
       {/* Bottom Bubbles */}
-      <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0"></div>
-      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-yellow-400/20 rounded-full z-0"></div>
+      <div className="absolute -top-10 -left-24 w-80 h-80 bg-yellow-400/20 rounded-full z-0"></div>
+      <div className="absolute -bottom-10 -right-32 w-52 h-52 bg-yellow-400/20 rounded-full z-0"></div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
         {servicesData.map((service) => (
           <div
             key={service.id}
             className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative border-2 border-yellow-100"
           >
+            <div className="absolute -bottom-20 -left-20 z-20 bg-yellow-400/20 w-40 h-40 object-cover rounded-full"></div>
             {/* Image with Overlay */}
             <div className="relative">
               <img
@@ -80,9 +81,7 @@ const Services = () => {
 
             {/* Card Content */}
             <div className="p-6 text-center">
-              <h3 className=" lg:text-lg font-bold text-yellow-500">
-                {service.title}
-              </h3>
+              <h3 className=" lg:text-lg font-bold ">{service.title}</h3>
               <p className="text-gray-600 text-sm mt-2">
                 {service.description}
               </p>
