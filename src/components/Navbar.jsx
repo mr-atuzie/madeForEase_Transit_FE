@@ -1,111 +1,122 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Autoplay } from "swiper/modules";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdOutlineClose } from "react-icons/md";
+import { FaShop } from "react-icons/fa6";
 
-// Import assets for the banners (example images)
-import banner1 from "../assets/banner.jpg";
-import banner2 from "../assets/banner2.jpg";
-import banner3 from "../assets/banner3.jpg";
-import banner4 from "../assets/banner4.jpg";
-
-const FooterBanner = () => {
-  const wordVariants = {
-    hidden: {
-      opacity: 0,
-      x: -50,
-    },
-    visible: (i) => ({
-      opacity: 1,
-      x: 0,
-      color: "#f59e0b", // yellow-500
-      transition: {
-        duration: 0.6,
-        delay: i * 0.2, // stagger the animations
-        ease: "easeOut",
-      },
-    }),
-  };
+const Navbar = () => {
+  const [menu, setMenu] = useState(false);
 
   return (
-    <Swiper
-      modules={[Autoplay]}
-      slidesPerView={1}
-      pagination={{ clickable: true }}
-      autoplay={{
-        delay: 4000, // Slightly longer to give more emphasis to each slide
-        disableOnInteraction: false,
-      }}
-      className="w-full"
-    >
-      {[
-        {
-          image: banner1,
-          highlight: "Effortless Travel",
-          description:
-            "Get where you need to be faster with modern, reliable transport that fits your schedule and lifestyle.",
-        },
-        {
-          image: banner2,
-          highlight: "On-Demand Rides",
-          description:
-            "No more waiting — access convenient, on-demand rides when and where you need them, right at your fingertips.",
-        },
-        {
-          image: banner3,
-          highlight: "Designed for Comfort",
-          description:
-            "Experience a smoother, more comfortable ride every time. Modern vehicles built for your convenience.",
-        },
-        {
-          image: banner4,
-          highlight: "Affordable & Reliable",
-          description:
-            "Enjoy a high-quality, affordable travel experience that doesn’t compromise on reliability or safety.",
-        },
-      ].map((slide, index) => (
-        <SwiperSlide key={index}>
-          <div className="relative w-full mx-auto h-[30vh] lg:h-[50vh] overflow-hidden group">
-            {/* Image with Gradient Overlay */}
-            <img
-              src={slide.image}
-              className="w-full h-full object-cover rounded-lg"
-              alt="Banner"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>
+    <nav className="bg-white  w-full fixed top-0 left-0 z-50 overflow-hidden">
+      <div className="w-[90%] lg:w-[95%] flex items-center justify-between h-[60px] mx-auto">
+        {/* Logo */}
+        <div className="flex items-center lg:gap-10">
+          <h1 className="tracking-wide text-xs lg:text-base font-bold  uppercase">
+            Made For Ease Transit
+          </h1>
+        </div>
 
-            {/* Highlight Text with Staggered Animation */}
-            <div className="absolute inset-0 flex flex-col justify-center px-6 lg:px-12 gap-4 text-white">
-              <motion.p
-                className="text-xl lg:text-3xl font-semibold text-center tracking-widest"
-                variants={wordVariants}
-                initial="hidden"
-                animate="visible"
-                custom={0}
+        {/* Desktop Navigation */}
+        <ul className="hidden lg:flex gap-6 items-center">
+          {[
+            "Features",
+            "Services",
+            "Contact Us",
+            "Invest History",
+            "Transactions",
+            "Referral",
+            "My account",
+          ].map((item, index) => (
+            <li key={index}>
+              <NavLink
+                to={`/${item.toLowerCase().replace(" ", "-")}`}
+                className={({ isActive }) =>
+                  `font-medium text-gray-700 hover:text-yellow-500 transition-all ${
+                    isActive ? "text-yellow-500 font-bold" : ""
+                  }`
+                }
               >
-                {slide.highlight.split(" ").map((word, i) => (
-                  <motion.span
-                    key={i}
-                    variants={wordVariants}
-                    custom={i}
-                    className="inline-block"
-                  >
-                    {word}{" "}
-                  </motion.span>
-                ))}
-              </motion.p>
-              <p className="text-sm lg:text-base text-gray-200 max-w-lg text-center">
-                {slide.description}
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+                {item}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop Buttons */}
+        <div className="hidden lg:flex items-center gap-6">
+          <NavLink to="/login">
+            <button className="border-2 font-medium border-gray-700 rounded-md px-4 py-2 hover:bg-gray-100 transition-all">
+              Log in
+            </button>
+          </NavLink>
+          <NavLink to="/register">
+            <button className="font-medium bg-black text-white rounded-md px-4 py-2 hover:bg-gray-800 transition-all">
+              Register
+            </button>
+          </NavLink>
+        </div>
+
+        {/* Hamburger Menu */}
+        <button
+          onClick={() => setMenu(!menu)}
+          className="lg:hidden z-50 text-gray-800"
+        >
+          {menu ? <MdOutlineClose size={25} /> : <RxHamburgerMenu size={25} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-[60px] right-0 w-full h-[30vh] bg-black/50 transform ${
+          menu ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out lg:hidden`}
+      >
+        <div className="w-full bg-yellow-50 h-full p-6 shadow-lg">
+          <ul className="flex flex-col gap-4 lg:gap-6">
+            {["Services", "Contact Us"].map((item, index) => (
+              <li key={index}>
+                <NavLink
+                  to={`/${item.toLowerCase().replace(" ", "-")}`}
+                  onClick={() => setMenu(false)}
+                  className={({ isActive }) =>
+                    `font-medium  hover:text-yellow-500 transition-all ${
+                      isActive ? "text-yellow-500 font-bold" : ""
+                    }`
+                  }
+                >
+                  {item}
+                </NavLink>
+              </li>
+            ))}
+            <li>
+              <NavLink to="/login">
+                <button
+                  onClick={() => setMenu(false)}
+                  className="w-full bg-yellow-500  text-white flex items-center justify-center gap-2 rounded-md py-2 hover:bg-gray-300 transition-all"
+                >
+                  <span>
+                    <FaShop size={20} />
+                  </span>
+                  <span>Visit shop</span>
+                </button>
+              </NavLink>
+            </li>
+            {/* <li>
+              <NavLink to="/register">
+                <button
+                  onClick={() => setMenu(false)}
+                  className="w-full bg-black text-white rounded-md py-2 hover:bg-gray-800 transition-all"
+                >
+                  Register
+                </button>
+              </NavLink>
+            </li> */}
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 
-export default FooterBanner;
+export default Navbar;
