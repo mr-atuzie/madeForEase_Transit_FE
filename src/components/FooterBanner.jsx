@@ -21,7 +21,7 @@ const FooterBanner = () => {
         delay: 4000, // Slightly longer to give more emphasis to each slide
         disableOnInteraction: false,
       }}
-      className="w-full mt-16"
+      className="w-full my-8"
     >
       {[
         // Slide content
