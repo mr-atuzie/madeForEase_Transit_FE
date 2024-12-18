@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
 import { FaShop } from "react-icons/fa6";
-import { AiOutlineHome, AiOutlineInfoCircle } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
+import { RiCustomerService2Fill } from "react-icons/ri";
 import { RiServiceLine } from "react-icons/ri";
 
 const Navbar = () => {
@@ -24,12 +25,7 @@ const Navbar = () => {
     {
       name: "Contact Us",
       path: "/contact-us",
-      icon: <AiOutlineInfoCircle size={20} />,
-    },
-    {
-      name: "Shop",
-      path: "/shop",
-      icon: <FaShop size={20} />,
+      icon: <RiCustomerService2Fill size={20} />,
     },
   ];
 
@@ -110,6 +106,16 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+
+          {/* Shop Button below Navigation with icon */}
+          <div className="mt-6">
+            <NavLink to="/shop" onClick={() => setMenu(false)}>
+              <button className="w-full py-3 bg-yellow-500 text-white font-medium flex items-center justify-center gap-2 rounded-md hover:bg-yellow-400 transition-all">
+                <FaShop size={20} />
+                Shop
+              </button>
+            </NavLink>
+          </div>
         </div>
       </div>
     </nav>
