@@ -21,7 +21,7 @@ const FooterBanner = () => {
         delay: 4000, // Slightly longer to give more emphasis to each slide
         disableOnInteraction: false,
       }}
-      className="w-full my-8"
+      className="w-full "
     >
       {[
         // Slide content
@@ -51,7 +51,7 @@ const FooterBanner = () => {
         },
       ].map((slide, index) => (
         <SwiperSlide key={index}>
-          <div className="relative w-full mx-auto rounded-lg h-[30vh] lg:h-[50vh] overflow-hidden group">
+          <div className="relative w-full mx-auto  h-[30vh] lg:h-[50vh] overflow-hidden group">
             {/* Image with Gradient Overlay */}
             <img
               src={slide.image}
