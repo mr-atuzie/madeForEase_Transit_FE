@@ -27,35 +27,31 @@ const FooterBanner = () => {
         // Slide content
         {
           image: banner1,
-          title: "Drive Innovation With",
-          highlight: "Seamless Mobility",
+          highlight: "Effortless Travel",
           description:
-            "Experience a new way to commute with cutting-edge technology that makes every ride efficient, comfortable, and smart.",
+            "Get where you need to be faster with modern, reliable transport that fits your schedule and lifestyle.",
         },
         {
           image: banner2,
-          title: "Your Future, on the Move",
-          highlight: "Electric Solutions",
+          highlight: "On-Demand Rides",
           description:
-            "Step into the future with electric vehicles that redefine performance, sustainability, and luxury.",
+            "No more waiting — access convenient, on-demand rides when and where you need them, right at your fingertips.",
         },
         {
           image: banner3,
-          title: "Explore the World of",
-          highlight: "Sustainable Travel",
+          highlight: "Designed for Comfort",
           description:
-            "Our electric-powered transportation is designed for a cleaner planet, reducing your carbon footprint while enhancing your journey.",
+            "Experience a smoother, more comfortable ride every time. Modern vehicles built for your convenience.",
         },
         {
           image: banner4,
-          title: "Smart Travel with",
-          highlight: "Precision & Speed",
+          highlight: "Affordable & Reliable",
           description:
-            "Get from A to B faster with intelligent, real-time travel solutions — powered by innovation and reliability.",
+            "Enjoy a high-quality, affordable travel experience that doesn’t compromise on reliability or safety.",
         },
       ].map((slide, index) => (
         <SwiperSlide key={index}>
-          <div className="relative w-[95%] mx-auto rounded-lg h-[40vh] lg:h-[50vh] overflow-hidden group">
+          <div className="relative w-full mx-auto rounded-lg h-[30vh] lg:h-[50vh] overflow-hidden group">
             {/* Image with Gradient Overlay */}
             <img
               src={slide.image}
@@ -64,21 +60,14 @@ const FooterBanner = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>
 
-            {/* Text Content */}
+            {/* Highlight Text */}
             <div className="absolute inset-0 flex flex-col justify-center px-6 lg:px-12 gap-4 text-white">
-              <p className="text-sm lg:text-base text-gray-200 max-w-lg">
+              <p className="text-xl lg:text-3xl font-semibold text-center tracking-widest animate-pulse">
+                {slide.highlight}
+              </p>
+              <p className="text-sm lg:text-base text-gray-200 max-w-lg text-center">
                 {slide.description}
               </p>
-
-              {/* Buttons */}
-              <div className="flex gap-4">
-                <button className="px-6 py-2 bg-yellow-500 text-sm lg:text-base font-medium rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300 ease-in-out">
-                  Get Started
-                </button>
-                <button className="px-6 py-2 bg-white text-yellow-500 text-sm lg:text-base font-medium rounded-lg shadow-md hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out">
-                  Learn More
-                </button>
-              </div>
             </div>
           </div>
         </SwiperSlide>
