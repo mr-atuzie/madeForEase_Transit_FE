@@ -52,14 +52,14 @@ const FooterBanner = () => {
         },
         {
           image:
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vegasautogallery.com%2Fused-vehicle-2023-cadillac-escalade-esv-v-series-c-2721%2F&psig=AOvVaw0Hd8AVa4hAINy_-c57Acuy&ust=1734615351834000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPju_vK3sYoDFQAAAAAdAAAAABAV",
+            "https://www.autodna.com/blog/wp-content/uploads/2024/01/7-seater-suv-comfort-space.jpg",
           highlight: "Designed for Comfort",
           description:
             "Experience a smoother, more comfortable ride every time. Modern vehicles built for your convenience.",
         },
         {
           image:
-            "https://www.realsimple.com/thmb/aJDUpqoFWZXJdFvU5XPkjjmAV7c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/impulse-buying-2000-d569eacebb0c48fa8766965d0352151c.jpg",
+            "https://res.cloudinary.com/zenbusiness/q_auto,w_1200,h_800,c_lfill/v1/shared-assets/picture/getting-customers.jpg",
           highlight: "Affordable & Reliable",
           description:
             "Enjoy a high-quality, affordable travel experience that doesn’t compromise on reliability or safety.",
