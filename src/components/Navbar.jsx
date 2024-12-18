@@ -67,19 +67,19 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-[60px] right-0 w-full h-[40vh] bg-black/50 transform ${
+        className={`fixed top-[50px] right-0 w-full h-[40vh] bg-black/50 transform ${
           menu ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         <div className="w-full bg-white h-full p-6 shadow-lg">
-          <ul className="flex flex-col gap-6">
-            {["Features", "Services", "Contact Us"].map((item, index) => (
+          <ul className="flex flex-col gap-4 lg:gap-6">
+            {["Services", "Contact Us"].map((item, index) => (
               <li key={index}>
                 <NavLink
                   to={`/${item.toLowerCase().replace(" ", "-")}`}
                   onClick={() => setMenu(false)}
                   className={({ isActive }) =>
-                    `font-medium text-gray-700 hover:text-yellow-500 transition-all ${
+                    `font-medium text-white hover:text-yellow-500 transition-all ${
                       isActive ? "text-yellow-500 font-bold" : ""
                     }`
                   }
