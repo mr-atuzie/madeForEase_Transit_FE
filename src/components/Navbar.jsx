@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
+import { FaShop } from "react-icons/fa6";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -67,7 +68,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-[60px] right-0 w-full h-[40vh] bg-black/50 transform ${
+        className={`fixed top-[60px] right-0 w-full h-[30vh] bg-black/50 transform ${
           menu ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
@@ -92,13 +93,16 @@ const Navbar = () => {
               <NavLink to="/login">
                 <button
                   onClick={() => setMenu(false)}
-                  className="w-full bg-gray-200 rounded-md py-2 hover:bg-gray-300 transition-all"
+                  className="w-full bg-yellow-500  text-white flex items-center justify-center gap-2 rounded-md py-2 hover:bg-gray-300 transition-all"
                 >
-                  Go to shop
+                  <span>
+                    <FaShop size={20} />
+                  </span>
+                  <span>Visit shop</span>
                 </button>
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/register">
                 <button
                   onClick={() => setMenu(false)}
@@ -107,7 +111,7 @@ const Navbar = () => {
                   Register
                 </button>
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
