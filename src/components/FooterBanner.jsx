@@ -6,12 +6,6 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 
-// Import assets for the banners (example images)
-import banner1 from "../assets/banner.jpg";
-import banner2 from "../assets/banner2.jpg";
-import banner3 from "../assets/banner3.jpg";
-import banner4 from "../assets/banner4.jpg";
-
 const FooterBanner = () => {
   const wordVariants = {
     hidden: {
@@ -43,25 +37,29 @@ const FooterBanner = () => {
     >
       {[
         {
-          image: banner1,
+          image:
+            "https://aspiringbackpacker.com/wp-content/uploads/2018/05/Meaning-of-travelling.jpg",
           highlight: "Effortless Travel",
           description:
             "Get where you need to be faster with modern, reliable transport that fits your schedule and lifestyle.",
         },
         {
-          image: banner2,
+          image:
+            "https://mlszn6rjkywy.i.optimole.com/w:1920/h:1032/q:mauto/f:best/https://nairaxi.ng/wp-content/uploads/2024/05/armoured-car-rentals-in-Abuja-Lagos-Kano-Port-Harcourt-and-all-major-cities-in-Nigeria.jpg",
           highlight: "On-Demand Rides",
           description:
             "No more waiting — access convenient, on-demand rides when and where you need them, right at your fingertips.",
         },
         {
-          image: banner3,
+          image:
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vegasautogallery.com%2Fused-vehicle-2023-cadillac-escalade-esv-v-series-c-2721%2F&psig=AOvVaw0Hd8AVa4hAINy_-c57Acuy&ust=1734615351834000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPju_vK3sYoDFQAAAAAdAAAAABAV",
           highlight: "Designed for Comfort",
           description:
             "Experience a smoother, more comfortable ride every time. Modern vehicles built for your convenience.",
         },
         {
-          image: banner4,
+          image:
+            "https://www.realsimple.com/thmb/aJDUpqoFWZXJdFvU5XPkjjmAV7c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/impulse-buying-2000-d569eacebb0c48fa8766965d0352151c.jpg",
           highlight: "Affordable & Reliable",
           description:
             "Enjoy a high-quality, affordable travel experience that doesn’t compromise on reliability or safety.",

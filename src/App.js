@@ -4,7 +4,7 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
-import Services from "./components/Services";
+import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
 function App() {
