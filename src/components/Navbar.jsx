@@ -1,18 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
+import {
+  FaHistory,
+  FaHome,
+  FaInfoCircle,
+  FaUser,
+  FaWallet,
+} from "react-icons/fa";
 import { FaShop } from "react-icons/fa6";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Sticky Navbar on Scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="bg-white  w-full fixed top-0 left-0 z-50 overflow-hidden">
+    <nav
+      className={`bg-white w-full fixed top-0 left-0 z-50 transition-shadow duration-300 ${
+        scrolled ? "shadow-md" : ""
+      }`}
+    >
       <div className="w-[90%] lg:w-[95%] flex items-center justify-between h-[60px] mx-auto">
         {/* Logo */}
         <div className="flex items-center lg:gap-10">
-          <h1 className="tracking-wide text-xs lg:text-base font-bold  uppercase">
+          <h1 className="tracking-wide text-xs lg:text-base font-bold uppercase">
             Made For Ease Transit
           </h1>
         </div>
@@ -20,24 +41,25 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex gap-6 items-center">
           {[
-            "Features",
-            "Services",
-            "Contact Us",
-            "Invest History",
-            "Transactions",
-            "Referral",
-            "My account",
+            { name: "Features", icon: <FaHome /> },
+            { name: "Services", icon: <FaInfoCircle /> },
+            { name: "Contact Us", icon: <FaInfoCircle /> },
+            { name: "Invest History", icon: <FaHistory /> },
+            { name: "Transactions", icon: <FaWallet /> },
+            { name: "Referral", icon: <FaUser /> },
+            { name: "My Account", icon: <FaUser /> },
           ].map((item, index) => (
             <li key={index}>
               <NavLink
-                to={`/${item.toLowerCase().replace(" ", "-")}`}
+                to={`/${item.name.toLowerCase().replace(" ", "-")}`}
                 className={({ isActive }) =>
-                  `font-medium text-gray-700 hover:text-yellow-500 transition-all ${
+                  `flex items-center gap-2 font-medium text-gray-700 hover:text-yellow-500 transition-all ${
                     isActive ? "text-yellow-500 font-bold" : ""
                   }`
                 }
+                aria-label={item.name}
               >
-                {item}
+                {item.icon} {item.name}
               </NavLink>
             </li>
           ))}
@@ -61,31 +83,42 @@ const Navbar = () => {
         <button
           onClick={() => setMenu(!menu)}
           className="lg:hidden z-50 text-gray-800"
+          aria-label="Toggle menu"
         >
           {menu ? <MdOutlineClose size={25} /> : <RxHamburgerMenu size={25} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed top-[60px] right-0 w-full h-[30vh] bg-black/50 transform ${
+        className={`fixed top-[60px] right-0 w-full bg-black/50 transform ${
           menu ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
-        <div className="w-full bg-yellow-50 h-full p-6 shadow-lg">
+        <div className="w-full bg-yellow-50 p-6 shadow-lg">
           <ul className="flex flex-col gap-4 lg:gap-6">
-            {["Services", "Contact Us"].map((item, index) => (
+            {[
+              { name: "Home", icon: <FaHome />, path: "/" },
+              { name: "Services", icon: <FaInfoCircle />, path: "/services" },
+              {
+                name: "Contact Us",
+                icon: <FaInfoCircle />,
+                path: "/contact-us",
+              },
+            ].map((item, index) => (
               <li key={index}>
                 <NavLink
-                  to={`/${item.toLowerCase().replace(" ", "-")}`}
+                  to={item.path}
                   onClick={() => setMenu(false)}
                   className={({ isActive }) =>
-                    `font-medium  hover:text-yellow-500 transition-all ${
+                    `flex items-center gap-2 font-medium text-gray-700 hover:text-yellow-500 transition-all ${
                       isActive ? "text-yellow-500 font-bold" : ""
                     }`
                   }
+                  aria-label={item.name}
                 >
-                  {item}
+                  {item.icon} {item.name}
                 </NavLink>
               </li>
             ))}
@@ -93,7 +126,7 @@ const Navbar = () => {
               <NavLink to="/login">
                 <button
                   onClick={() => setMenu(false)}
-                  className="w-full bg-yellow-500  text-white flex items-center justify-center gap-2 rounded-md py-2 hover:bg-gray-300 transition-all"
+                  className="w-full bg-yellow-500 text-white flex items-center justify-center gap-2 rounded-md py-2 hover:bg-gray-300 transition-all"
                 >
                   <span>
                     <FaShop size={20} />
@@ -102,16 +135,6 @@ const Navbar = () => {
                 </button>
               </NavLink>
             </li>
-            {/* <li>
-              <NavLink to="/register">
-                <button
-                  onClick={() => setMenu(false)}
-                  className="w-full bg-black text-white rounded-md py-2 hover:bg-gray-800 transition-all"
-                >
-                  Register
-                </button>
-              </NavLink>
-            </li> */}
           </ul>
         </div>
       </div>
