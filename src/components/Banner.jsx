@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -78,12 +79,17 @@ const Banner = () => {
 
               {/* Buttons */}
               <div className="flex gap-4">
-                <button className="px-6 py-2 bg-yellow-500 text-sm lg:text-base font-medium rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300 ease-in-out">
-                  Get Started
-                </button>
-                <button className="px-6 py-2 bg-white text-yellow-500 text-sm lg:text-base font-medium rounded-lg shadow-md hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out">
-                  Learn More
-                </button>
+                <Link to={"/contact-us"}>
+                  <button className="px-6 py-2 bg-yellow-500 text-sm lg:text-base font-medium rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300 ease-in-out">
+                    Get Started
+                  </button>
+                </Link>
+
+                <Link to={"/services"}>
+                  <button className="px-6 py-2 bg-white text-yellow-500 text-sm lg:text-base font-medium rounded-lg shadow-md hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

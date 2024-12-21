@@ -34,7 +34,8 @@ const ContactUs = () => {
                   Our Location
                 </h4>
                 <p className="text-gray-600 text-xs lg:text-sm">
-                  123 Ease Transit Ave, Lagos, Nigeria
+                  No 3, Ozuboko Rd,Abuloma Rd,Fimeana. Port Harcourt
+                  500101,Rivers state,Nigeria.
                 </p>
               </div>
             </div>
@@ -49,7 +50,7 @@ const ContactUs = () => {
                   Call Us / Whatsapp
                 </h4>
                 <p className="text-gray-600 text-xs lg:text-sm">
-                  +234 916 194 0019 / +234 810 765 0714
+                  +234 916 194 0019, +234 810 765 0714
                 </p>
               </div>
             </div>

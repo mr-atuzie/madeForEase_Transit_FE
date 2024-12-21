@@ -6,6 +6,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdRoomService } from "react-icons/md";
+import logo from "../assets/logo.webp";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -38,8 +39,13 @@ const Navbar = () => {
     <nav className="bg-white w-full fixed top-0 left-0 z-50 overflow-hidden">
       <div className="w-[90%] lg:w-[95%] flex items-center justify-between h-[60px] mx-auto">
         {/* Logo */}
-        <div className="flex items-center lg:gap-10">
-          <h1 className="tracking-wide text-xs lg:text-base font-bold uppercase">
+        <div className="flex items-center gap-2 lg:gap-4">
+          <img
+            className=" w-8 h-8 rounded-lg object-contain"
+            src={logo}
+            alt=""
+          />
+          <h1 className="tracking-wide text-yellow-500 text-xs lg:text-base font-bold uppercase">
             Made For Ease Transit
           </h1>
         </div>

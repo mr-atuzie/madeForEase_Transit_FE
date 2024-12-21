@@ -5,38 +5,34 @@ const Footer = () => {
     {
       title: "Company",
       list: [
-        "About us",
-        "News",
+        "Services",
+        "Reatures",
         "Terms of use",
         "Privacy policy",
         "Disclaimer",
-        "Cookie policy",
         "Community",
       ],
     },
     {
       title: "Products",
       list: [
-        "Exchange",
-        "Buy Crypto",
-        "Gift Card",
-        "NFT",
-        "Auto-Invest",
-        "Crypto API",
-        "Crypto Indices",
-        "Research",
-        "Charity",
+        "Luxury Cars",
+        "Car Escort",
+        "Private Jets",
+        "Travel mini Bus",
+        "Online Shopping / Delivery",
       ],
     },
 
     {
       title: "Services",
       list: [
-        "Buy & Sell Crypto",
-        "Buy Bitcoin",
-        "Buy Ethereum",
-        "BTC to USD",
-        "Buy Crypto With Paypal",
+        "Rent cars",
+        "Travels",
+        "Sending parcels",
+        "Recieve parcels",
+        "Online shopping",
+        "Deliveries",
       ],
     },
     {
@@ -46,19 +42,11 @@ const Footer = () => {
         "FAQ",
         "Product Feedback & Suggestions",
         "Support Center",
-        "Trading Rules",
       ],
     },
     {
       title: "Socials",
-      list: [
-        "X(Twitter)",
-        "Facebook",
-        "Discord",
-        "Reddit",
-        "Telegram",
-        "Instagram",
-      ],
+      list: ["X(Twitter)", "Facebook", "Telegram", "Instagram"],
     },
   ];
   return (
@@ -91,7 +79,7 @@ const Footer = () => {
         </div>
         <div className=" border-t mt-5 lg:mt-10">
           <p className=" text-center my-4 text-xs text-yellow-500 lg:text-base">
-            made for ease transit &copy; 2024.{" "}
+            Made for ease transit &copy; 2024.{" "}
             <span className=" font-medium">All rights reserved</span>{" "}
           </p>
         </div>
