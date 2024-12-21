@@ -34,8 +34,7 @@ const ContactUs = () => {
                   Our Location
                 </h4>
                 <p className="text-gray-600 text-xs lg:text-sm">
-                  No 3, Ozuboko Rd,Abuloma Rd,Fimeana. Port Harcourt
-                  500101,Rivers state,Nigeria.
+                  No 3, Ozuboko Rd,Abuloma Rd, Port Harcourt.
                 </p>
               </div>
             </div>
