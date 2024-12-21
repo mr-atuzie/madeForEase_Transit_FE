@@ -8,18 +8,18 @@ import service5 from "../assets/service5.jpeg";
 // Service Data
 const servicesData = [
   {
-    id: 1,
-    title: "Travel With Ease",
-    description:
-      "Fast, reliable transit made for your convenience. Plan your journeys effortlessly.",
-    image: service1,
-  },
-  {
     id: 2,
     title: "Rent Rides",
     description:
       "Rent a car for as low as 50,000 Naira per day. Flexible and affordable options available.",
     image: service2,
+  },
+  {
+    id: 1,
+    title: "Travel With Ease",
+    description:
+      "Fast, reliable transit made for your convenience. Plan your journeys effortlessly.",
+    image: service1,
   },
   {
     id: 3,

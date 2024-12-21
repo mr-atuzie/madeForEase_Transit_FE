@@ -70,7 +70,7 @@ const FooterBanner = () => {
             {/* Image with Gradient Overlay */}
             <img
               src={slide.image}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover "
               alt="Banner"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>

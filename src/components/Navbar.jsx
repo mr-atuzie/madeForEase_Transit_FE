@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
-import { FaShop } from "react-icons/fa6";
-import { AiOutlineHome } from "react-icons/ai";
+// import { FaShop } from "react-icons/fa6";
+import { FaHome } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
-import { RiServiceLine } from "react-icons/ri";
+import { MdRoomService } from "react-icons/md";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -15,18 +15,23 @@ const Navbar = () => {
     {
       name: "Home",
       path: "/",
-      icon: <AiOutlineHome size={20} />,
+      icon: <FaHome size={20} />,
     },
     {
       name: "Services",
       path: "/services",
-      icon: <RiServiceLine size={20} />,
+      icon: <MdRoomService size={20} />,
     },
     {
       name: "Contact Us",
       path: "/contact-us",
       icon: <RiCustomerService2Fill size={20} />,
     },
+    // {
+    //   name: "Visit Store",
+    //   path: "*",
+    //   icon: <FaShop size={20} />,
+    // },
   ];
 
   return (
@@ -83,39 +88,35 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-[60px] right-0 w-full h-[40vh] bg-black/50 transform ${
+        className={`fixed top-[60px] right-0 w-full h-auto bg-black/50 transform ${
           menu ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
-        <div className="w-full bg-yellow-50 h-full p-6 shadow-lg">
+        <div className="w-full bg-yellow-50 p-6 shadow-lg rounded-b-md">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link, index) => (
-              <li key={index}>
+              <li key={index} className="flex items-center">
                 <NavLink
                   to={link.path}
                   onClick={() => setMenu(false)}
                   className={({ isActive }) =>
-                    `font-medium flex items-center gap-2 hover:text-yellow-500 transition-all ${
-                      isActive ? "text-yellow-500 font-bold" : ""
+                    `flex items-center gap-4 w-full text-gray-800 font-medium rounded-md py-2 text-sm transition-all ${
+                      isActive
+                        ? "bg-yellow-500 text-white shadow-md"
+                        : "hover:text-yellow-500"
                     }`
                   }
                 >
-                  {link.icon}
-                  {link.name}
+                  <div className="w-10 h-10 flex items-center justify-center bg-yellow-500 rounded-md text-white">
+                    {link.icon}
+                  </div>
+                  <span className="text-base font-medium md:text-lg">
+                    {link.name}
+                  </span>
                 </NavLink>
               </li>
             ))}
           </ul>
-
-          {/* Shop Button below Navigation with icon */}
-          <div className="mt-6">
-            <NavLink to="/shop" onClick={() => setMenu(false)}>
-              <button className="w-full py-3 bg-yellow-500 text-white font-medium flex items-center justify-center gap-2 rounded-md hover:bg-yellow-400 transition-all">
-                <FaShop size={20} />
-                Shop
-              </button>
-            </NavLink>
-          </div>
         </div>
       </div>
     </nav>

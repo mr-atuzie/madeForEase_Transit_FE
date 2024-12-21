@@ -1,6 +1,7 @@
 import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const ContactUs = () => {
   return (
@@ -45,10 +46,10 @@ const ContactUs = () => {
               </div>
               <div>
                 <h4 className="text-gray-800 font-medium text-sm lg:text-lg">
-                  Call Us
+                  Call Us / Whatsapp
                 </h4>
                 <p className="text-gray-600 text-xs lg:text-sm">
-                  +234 123 456 7890
+                  +234 916 194 0019 / +234 810 765 0714
                 </p>
               </div>
             </div>
@@ -63,7 +64,7 @@ const ContactUs = () => {
                   Email Us
                 </h4>
                 <p className="text-gray-600 text-xs lg:text-sm">
-                  contact@easetransit.com
+                  madeforeas@mail.com
                 </p>
               </div>
             </div>
@@ -76,19 +77,19 @@ const ContactUs = () => {
               <div className="flex gap-4">
                 <a
                   href="*"
-                  className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-yellow-500 text-gray-600 hover:text-white rounded-full transition-all duration-300"
+                  className="w-10 h-10 flex items-center justify-center bg-blue-500 hover:bg-yellow-500 text-white hover:text-white rounded-full transition-all duration-300"
                 >
                   <FaFacebookF size={18} />
                 </a>
                 <a
                   href="*"
-                  className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-yellow-500 text-gray-600 hover:text-white rounded-full transition-all duration-300"
+                  className="w-10 h-10 flex items-center justify-center bg-black hover:bg-yellow-500 text-white hover:text-white rounded-full transition-all duration-300"
                 >
-                  <FaTwitter size={18} />
+                  <FaXTwitter size={18} />
                 </a>
                 <a
                   href="*"
-                  className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-yellow-500 text-gray-600 hover:text-white rounded-full transition-all duration-300"
+                  className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-full shadow-md hover:opacity-90 transition-all duration-300"
                 >
                   <FaInstagram size={18} />
                 </a>
