@@ -58,7 +58,7 @@ const Shop = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl lg:text-5xl uppercase font-bold text-blue-500 tracking-wide"
+          className="text-xl lg:text-5xl uppercase font-bold text-white tracking-wide"
         >
           {images[currentImage].caption}
         </motion.div>
@@ -71,7 +71,7 @@ const Shop = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105"
+          className="inline-block bg-blue-500 text-sm hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105"
         >
           Visit Kulipal Now
         </motion.a>
@@ -90,15 +90,15 @@ const Shop = () => {
             className="w-16 h-16 rounded-lg lg:w-20 lg:h-20 object-cover"
           />
         </div>
-      </div>
 
-      {/* Powered By Section */}
-      <div className=" text-center text-xs lg:text-sm text-white">
-        <p>
-          Powered by{" "}
-          <span className="font-bold text-yellow-500">MadeForEase</span> and{" "}
-          <span className="font-bold text-blue-500">Kulipa Business</span>
-        </p>
+        {/* Powered By Section */}
+        <div className=" text-center mt-16 text-xs lg:text-sm text-white">
+          <p>
+            Powered by{" "}
+            <span className="font-bold text-yellow-500">MadeForEase</span> and{" "}
+            <span className="font-bold text-blue-500">Kulipa Business</span>
+          </p>
+        </div>
       </div>
     </div>
   );
