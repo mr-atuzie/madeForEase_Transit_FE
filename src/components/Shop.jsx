@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import madeForEaseLogo from "../assets/newLogo.jpeg"; // Replace with actual logo path
 import kulipaLogo from "../assets/kulipal.jpeg"; // Replace with actual logo path
+import { BsCart4 } from "react-icons/bs";
 
 const Shop = () => {
   const images = [
@@ -38,30 +39,51 @@ const Shop = () => {
       style={{ backgroundImage: `url(${images[currentImage].url})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+
+      {/* Logo */}
+      <img
+        src={madeForEaseLogo}
+        alt="MadeForEase"
+        className="absolute top-6 left-6 w-16 h-16 lg:w-20 lg:h-20 rounded-lg object-cover z-20"
+      />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center gap-4 lg:gap-8">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center gap-6 lg:gap-10">
+        {/* Header */}
+        <div className="flex items-center gap-3">
+          <BsCart4 size={40} className="text-white" />
+          <h1 className="text-lg lg:text-2xl text-white font-bold uppercase">
+            Shop with
+          </h1>
+          <img
+            src={kulipaLogo}
+            alt="Kulipa"
+            className="w-28 h-16 lg:w-32 lg:h-20 rounded-lg object-cover"
+          />
+        </div>
+
+        {/* Caption */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-2xl lg:text-5xl font-bold uppercase text-white tracking-wider"
+        >
+          {images[currentImage].caption}
+        </motion.div>
+
         {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-base lg:text-xl text-gray-300 max-w-3xl leading-relaxed"
+          className="text-sm lg:text-lg text-gray-300 max-w-3xl leading-relaxed"
         >
-          Enjoy 25% of with{" "}
-          <span className=" text-blue-500 font-medium">Kulipal</span>, when you
-          use our link for
+          Enjoy <span className="text-blue-500 font-medium">25% off</span> with{" "}
+          <span className="text-blue-500 font-medium">Kulipal</span> when you
+          use our link for bookings.
         </motion.p>
-        {/* Dynamic Caption */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-xl lg:text-5xl uppercase font-bold text-white tracking-wide"
-        >
-          {images[currentImage].caption}
-        </motion.div>
 
         {/* Call to Action */}
         <motion.a
@@ -71,34 +93,19 @@ const Shop = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="inline-block bg-blue-500 text-sm hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105"
+          className="bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-10 rounded-full shadow-xl transition-transform transform hover:scale-105"
         >
           Visit Kulipal Now
         </motion.a>
+      </div>
 
-        {/* Logos */}
-        <div className="flex items-center gap-6">
-          <img
-            src={madeForEaseLogo}
-            alt="MadeForEase"
-            className="w-16 h-16 rounded-lg lg:w-20 lg:h-20 object-cover"
-          />
-          <span className="text-white font-bold text-2xl lg:text-3xl">×</span>
-          <img
-            src={kulipaLogo}
-            alt="Kulipa"
-            className="w-16 h-16 rounded-lg lg:w-20 lg:h-20 object-cover"
-          />
-        </div>
-
-        {/* Powered By Section */}
-        <div className=" text-center mt-16 text-xs lg:text-sm text-white">
-          <p>
-            Powered by{" "}
-            <span className="font-bold text-yellow-500">MadeForEase</span> and{" "}
-            <span className="font-bold text-blue-500">Kulipa Business</span>
-          </p>
-        </div>
+      {/* Footer */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center text-sm lg:text-base text-gray-300">
+        <p>
+          Powered by{" "}
+          <span className="font-bold text-yellow-500">MadeForEase</span> and{" "}
+          <span className="font-bold text-blue-500">Kulipa Business</span>
+        </p>
       </div>
     </div>
   );
