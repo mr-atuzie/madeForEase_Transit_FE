@@ -38,23 +38,16 @@ const Shop = () => {
       style={{ backgroundImage: `url(${images[currentImage].url})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
-
-      {/* Logos Section */}
-      <div className="absolute top-6 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-20">
-        <img src={madeForEaseLogo} alt="MadeForEase" className="w-20 h-20" />
-        <span className="text-white font-semibold text-xl">×</span>
-        <img src={kulipaLogo} alt="Kulipa" className="w-20 h-20" />
-      </div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-6 text-center gap-6">
-        {/* Caption for each image */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center gap-8">
+        {/* Dynamic Caption */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl font-semibold"
+          className="text-3xl lg:text-5xl uppercase font-bold text-blue-400 tracking-wide"
         >
           {images[currentImage].caption}
         </motion.div>
@@ -64,7 +57,7 @@ const Shop = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-lg md:text-xl text-gray-300 max-w-3xl"
+          className="text-base lg:text-xl text-gray-300 max-w-3xl leading-relaxed"
         >
           Enjoy <span className="font-bold text-blue-500">25% off</span> when
           you book event venues, hotels, shortlet apartments, or order delicious
@@ -79,14 +72,29 @@ const Shop = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300"
+          className="inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105"
         >
           Visit Kulipal Now
         </motion.a>
+
+        {/* Logos */}
+        <div className="flex items-center gap-6">
+          <img
+            src={madeForEaseLogo}
+            alt="MadeForEase"
+            className="w-16 h-16 rounded-lg lg:w-20 lg:h-20 object-cover"
+          />
+          <span className="text-white font-bold text-2xl lg:text-3xl">×</span>
+          <img
+            src={kulipaLogo}
+            alt="Kulipa"
+            className="w-16 h-16 rounded-lg lg:w-20 lg:h-20 object-cover"
+          />
+        </div>
       </div>
 
       {/* Powered By Section */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm text-white">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-xs lg:text-sm text-gray-300">
         <p>
           Powered by{" "}
           <span className="font-bold text-yellow-500">MadeForEase</span> and{" "}
