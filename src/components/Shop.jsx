@@ -7,18 +7,18 @@ const Shop = () => {
   const images = [
     {
       url: "https://venues.ng/wp-content/uploads/2023/07/Evelyn-Marquee-event-center-1024x1024.jpg",
-      caption: "Book Event Venues",
+      caption: "Event Venue Bookings",
     },
     {
       url: "https://media-cdn.tripadvisor.com/media/photo-o/16/f0/4a/57/hotel-exterior.jpg",
-      caption: "Book Hotels",
+      caption: "Hotel Bookings",
     },
     {
       url: "https://krentdevstorage.blob.core.windows.net/krentfiles/property-6756c1b43c9de9001181cfe4-1733738990280-cover.jpeg",
-      caption: "Shortlet Houses",
+      caption: "Shortlet Apartment Bookings",
     },
     {
-      url: "https://www.ubereats.com/images/logo.png",
+      url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHZ9msTBJM9zJ3t7BdjUEN2kUTPiSH3qxfP8XGqVd82Um5nBhDuOFuBAovAmc2KRkroq_rsMD4ltlKxk-S51UBXLDGIjeZwrnfrC0lfqtFr1WVSy8VVwtKwzDZr_WRfY8Z2l5wqReFBStpGrS-eH9hrXCDWcC3eu3Zgyq6y70SX9MxxqsksLohOGk0/s2048/jollof%20rice%20sisi%20yemmie.jpg",
       caption: "Order Delicious Food",
     },
   ];
@@ -41,17 +41,7 @@ const Shop = () => {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center gap-8">
-        {/* Dynamic Caption */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-3xl lg:text-5xl uppercase font-bold text-blue-400 tracking-wide"
-        >
-          {images[currentImage].caption}
-        </motion.div>
-
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center gap-4 lg:gap-8">
         {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -59,10 +49,19 @@ const Shop = () => {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="text-base lg:text-xl text-gray-300 max-w-3xl leading-relaxed"
         >
-          Enjoy <span className="font-bold text-blue-500">25% off</span> when
-          you book event venues, hotels, shortlet apartments, or order delicious
-          food via Kulipa.
+          Enjoy 25% of with{" "}
+          <span className=" text-blue-500 font-medium">Kulipal</span>, when you
+          use our link for
         </motion.p>
+        {/* Dynamic Caption */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl lg:text-5xl uppercase font-bold text-blue-500 tracking-wide"
+        >
+          {images[currentImage].caption}
+        </motion.div>
 
         {/* Call to Action */}
         <motion.a
@@ -94,7 +93,7 @@ const Shop = () => {
       </div>
 
       {/* Powered By Section */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-xs lg:text-sm text-gray-300">
+      <div className=" text-center text-xs lg:text-sm text-white">
         <p>
           Powered by{" "}
           <span className="font-bold text-yellow-500">MadeForEase</span> and{" "}
