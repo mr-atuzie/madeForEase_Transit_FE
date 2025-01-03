@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
-// import { FaShop } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdRoomService } from "react-icons/md";
 import logo from "../assets/logo.webp";
+import { BsCart4 } from "react-icons/bs";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -28,11 +28,11 @@ const Navbar = () => {
       path: "/contact-us",
       icon: <RiCustomerService2Fill size={20} />,
     },
-    // {
-    //   name: "Visit Store",
-    //   path: "*",
-    //   icon: <FaShop size={20} />,
-    // },
+    {
+      name: "Shop with ease",
+      path: "/shop",
+      icon: <BsCart4 size={20} />,
+    },
   ];
 
   return (
@@ -70,7 +70,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Buttons */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden items-center gap-6">
           <NavLink to="/login">
             <button className="border-2 font-medium border-gray-700 rounded-md px-4 py-2 hover:bg-gray-100 transition-all">
               Log in

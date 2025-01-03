@@ -113,12 +113,12 @@ const Reviews = () => {
                 <div className="shadow-lg  border-2 border-yellow-100  relative overflow-hidden rounded-lg p-2.5 lg:p-5 transition-transform hover:scale-105">
                   <div className="z-50 flex justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      <img
+                      {/* <img
                         src={testimonial.img}
                         className="w-12 h-12 rounded-full z-50 object-cover "
                         alt={testimonial.name}
                         loading="lazy"
-                      />
+                      /> */}
                       <div>
                         <h3 className="capitalize text-sm lg:text-lg z-50 font-semibold text-gray-800">
                           {testimonial.name}

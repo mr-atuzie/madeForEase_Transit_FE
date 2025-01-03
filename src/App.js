@@ -7,6 +7,7 @@ import ResetPassword from "./pages/ResetPassword";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import ScrollTop from "./components/ScrollTop";
+import Shop from "./components/Shop";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
