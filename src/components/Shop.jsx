@@ -8,7 +8,7 @@ const Shop = () => {
   const images = [
     {
       url: "https://venues.ng/wp-content/uploads/2023/07/Evelyn-Marquee-event-center-1024x1024.jpg",
-      caption: "Event Venue Bookings",
+      caption: "Event Ticket",
     },
     {
       url: "https://media-cdn.tripadvisor.com/media/photo-o/16/f0/4a/57/hotel-exterior.jpg",
@@ -39,23 +39,19 @@ const Shop = () => {
       style={{ backgroundImage: `url(${images[currentImage].url})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60"></div>
 
       {/* Logo */}
       <img
         src={madeForEaseLogo}
         alt="MadeForEase"
-        className="absolute top-6 left-6 w-16 h-16 lg:w-20 lg:h-20 rounded-lg object-cover z-20"
+        className="absolute top-6 left-6 w-10 h-10 lg:w-20 lg:h-20 rounded-lg object-cover z-20"
       />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center gap-6 lg:gap-10">
         {/* Header */}
         <div className="flex items-center gap-3">
-          <BsCart4 size={40} className="text-white" />
-          <h1 className="text-lg lg:text-2xl text-white font-bold uppercase">
-            Shop with
-          </h1>
           <img
             src={kulipaLogo}
             alt="Kulipa"
@@ -78,9 +74,9 @@ const Shop = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-sm lg:text-lg text-gray-300 max-w-3xl leading-relaxed"
+          className="text-sm lg:text-lg text-white max-w-3xl leading-relaxed"
         >
-          Enjoy <span className="text-blue-500 font-medium">25% off</span> with{" "}
+          Enjoy 25% off with{" "}
           <span className="text-blue-500 font-medium">Kulipal</span> when you
           use our link for bookings.
         </motion.p>
@@ -95,12 +91,12 @@ const Shop = () => {
           transition={{ delay: 0.9, duration: 0.8 }}
           className="bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-10 rounded-full shadow-xl transition-transform transform hover:scale-105"
         >
-          Visit Kulipal Now
+          Visit Kulipal <BsCart4 size={20} className="text-white" />
         </motion.a>
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center text-sm lg:text-base text-gray-300">
+      <div className="text-center text-xs lg:text-base text-white">
         <p>
           Powered by{" "}
           <span className="font-bold text-yellow-500">MadeForEase</span> and{" "}
