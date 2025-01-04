@@ -39,7 +39,7 @@ const Shop = () => {
       style={{ backgroundImage: `url(${images[currentImage].url})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80"></div>
 
       {/* Logo */}
       <img
@@ -58,17 +58,6 @@ const Shop = () => {
             className="w-28 h-16 lg:w-32 lg:h-20 rounded-lg object-cover"
           />
         </div>
-
-        {/* Caption */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-2xl lg:text-5xl font-bold uppercase text-white tracking-wider"
-        >
-          {images[currentImage].caption}
-        </motion.div>
-
         {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -81,6 +70,15 @@ const Shop = () => {
           use our link for bookings.
         </motion.p>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-2xl lg:text-5xl text-white font-bold uppercase tracking-wider"
+        >
+          {images[currentImage].caption}
+        </motion.div>
+
         {/* Call to Action */}
         <motion.a
           href="https://kulipal.com"
@@ -89,19 +87,18 @@ const Shop = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-10 rounded-full shadow-xl transition-transform transform hover:scale-105"
+          className="bg-blue-500 hover:bg-blue-400 flex  gap-2 text-white font-semibold py-3 px-10 rounded-full shadow-xl transition-transform transform hover:scale-105"
         >
           Visit Kulipal <BsCart4 size={20} className="text-white" />
         </motion.a>
-      </div>
-
-      {/* Footer */}
-      <div className="text-center text-xs lg:text-base text-white">
-        <p>
-          Powered by{" "}
-          <span className="font-bold text-yellow-500">MadeForEase</span> and{" "}
-          <span className="font-bold text-blue-500">Kulipa Business</span>
-        </p>
+        {/* Footer */}
+        <div className="text-center mt-16 text-xs lg:text-base text-white">
+          <p>
+            Powered by{" "}
+            <span className="font-bold text-yellow-500">MadeForEase</span> &{" "}
+            <span className="font-bold text-blue-500">Kulipa Business</span>
+          </p>
+        </div>
       </div>
     </div>
   );
