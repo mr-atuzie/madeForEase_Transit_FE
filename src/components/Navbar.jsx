@@ -5,7 +5,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdRoomService } from "react-icons/md";
-import logo from "../assets/logo.webp";
+import logo from "../assets/newLogo.jpeg";
 import { BsCart4 } from "react-icons/bs";
 
 const Navbar = () => {
@@ -41,13 +41,13 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2 lg:gap-4">
           <img
-            className=" w-8 h-8 rounded-lg object-contain"
+            className=" w-10 h-10 rounded-lg object-cover"
             src={logo}
             alt=""
           />
-          <h1 className="tracking-wide text-yellow-500 text-xs lg:text-base font-bold uppercase">
+          {/* <h1 className="tracking-wide text-yellow-500 text-xs lg:text-base font-bold uppercase">
             Made For Ease Transit
-          </h1>
+          </h1> */}
         </div>
 
         {/* Desktop Navigation */}
