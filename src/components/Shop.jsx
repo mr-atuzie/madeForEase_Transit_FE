@@ -74,7 +74,7 @@ const Shop = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl lg:text-5xl text-white font-bold uppercase tracking-wider"
+          className="text-xl lg:text-5xl text-white font-bold uppercase tracking-wider"
         >
           {images[currentImage].caption}
         </motion.div>
@@ -87,7 +87,7 @@ const Shop = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="bg-blue-500 hover:bg-blue-400 flex  gap-2 text-white font-semibold py-3 px-10 rounded-full shadow-xl transition-transform transform hover:scale-105"
+          className="bg-blue-600 hover:bg-blue-400 flex  gap-2 text-white font-semibold py-3 px-10 rounded-full shadow-xl transition-transform transform hover:scale-105"
         >
           Visit Kulipal <BsCart4 size={20} className="text-white" />
         </motion.a>
