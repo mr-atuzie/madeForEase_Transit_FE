@@ -67,6 +67,17 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
+          <li className="flex items-center gap-2">
+            <a
+              href="https://madeforease.shop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`font-medium flex items-center gap-2 text-gray-700 hover:text-yellow-500 transition-all `}
+            >
+              <BsCart4 size={20} />
+              <span>Shop with ease</span>
+            </a>
+          </li>
         </ul>
 
         {/* Desktop Buttons */}
@@ -122,6 +133,21 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
+            <li className="flex items-center">
+              <a
+                href="https://madeforease.shop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 w-full text-gray-800 font-medium rounded-md py-2 text-sm transition-all hover:text-yellow-500"
+              >
+                <div className="w-10 h-10 flex items-center justify-center bg-yellow-500 rounded-md text-white">
+                  <BsCart4 size={20} />
+                </div>
+                <span className="text-base font-medium md:text-lg">
+                  Shop with ease
+                </span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
