@@ -28,11 +28,6 @@ const Navbar = () => {
       path: "/contact-us",
       icon: <RiCustomerService2Fill size={20} />,
     },
-    {
-      name: "Shop with ease",
-      path: "/shop",
-      icon: <BsCart4 size={20} />,
-    },
   ];
 
   return (
